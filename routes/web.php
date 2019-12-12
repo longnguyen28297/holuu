@@ -15,7 +15,43 @@ Route::get('/', function () {
     return view('welcome');
 });
 //view
-route::get('/home',[
-	'uses'=>'HomeController@Home',
-	'as'=>'Home'
+route::get('/trangchu',[
+	'uses'=>'HomeController@trangchu',
+	'as'=>'trangchu'
+]);
+route::get('/chitiet',[
+	'uses'=>'HomeController@chitiet',
+	'as'=>'chitiet'
+]);
+route::get('congdongdonggop',[
+	'uses'=>'HomeController@congdongdonggop',
+	'as'=>'congdongdonggop'
+]);
+route::get('gopy',[
+	'uses'=>'HomeController@gopy',
+	'as'=>'gopy'
+]);
+route::get('khuyenhockhuyentai',[
+	'uses'=>'HomeController@khuyenhockhuyentai',
+	'as'=>'khuyenhockhuyentai'
+]);
+route::get('lichsudongho',[
+	'uses'=>'HomeController@lichsudongho',
+	'as'=>'lichsudongho'
+]);
+route::get('nguoitotviectot',[
+	'uses'=>'HomeController@nguoitotviectot',
+	'as'=>'nguoitotviectot'
+]);
+route::get('quyche',[
+	'uses'=>'HomeController@quyche',
+	'as'=>'quyche'
+]);
+route::get('thongtinsukien',[
+	'uses'=>'HomeController@thongtinsukien',
+	'as'=>'thongtinsukien'
+]);
+route::get('thuvien',[
+	'uses'=>'HomeController@thuvien',
+	'as'=>'thuvien'
 ]);

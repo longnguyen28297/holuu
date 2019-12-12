@@ -1,0 +1,181 @@
+.post-title{
+  font-size: 24px;
+  font-family: 'Roboto Condensed', sans-serif;
+  line-height: 1.3em;
+  font-weight: 700;
+  color: #333333;
+}
+.post-title p strong{
+  padding: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+.ban-tin{
+  margin-bottom: 20px;
+  text-align: center;
+}
+/*  icon share */
+.icon-share{
+  display: flex;
+  margin-top: -47px;
+  margin-bottom: 30px;
+}
+.icon-share p{
+  margin-right: 10px;
+  line-height: 35px;
+}
+.icon-share span{
+  font-size: 25px;
+  margin-right: 20px;
+  color: gray;
+}
+
+.icon-share span:hover{
+  color: red;
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border-bottom: 1px solid #FFE9BC;
+  background-color: white;
+  margin-bottom: 30px;
+  
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 16px;
+  color: black;
+  background-color: #FFE9BC;
+}
+
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+  border-bottom: 1px solid #FFE9BC;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #fe0002;
+  border: 0.1px solid #FFE9BC;
+  border-bottom: none;
+  font-weight: bold;
+  color: white;
+}
+
+/* Style the tab content */
+.tabcontent {
+  
+  height: auto;
+  margin-top: -10px;
+  margin-bottom: 100px;
+}
+.tab-thongtin{
+  display: flex;
+  background-color: #ccc;
+  border: 1px solid #ccc;
+}
+}
+.tab-thongtin .avatar .img{
+  margin: 20px;
+  max-width: 100px;
+  height: auto;
+  object-fit: cover;
+  
+}
+.avatar{
+    margin: 20px;
+    width: 200px;
+    height: 100px;
+}
+.text{
+  margin-top: 30px;
+}
+.text h5{
+  font-size: 15px;
+  color: black;
+  font-weight: 700;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+.text span{
+  float: right;
+  color: #0099cc;
+  font-family: Georgia;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 15px;
+}
+.text p{
+  font-size: 13px;
+  font-weight: 600;
+  font-style: italic;
+}
+.img-baiviet {
+  width: 100%;
+  height: 150px;
+}
+.img-baiviet img{
+  width: 330px;
+  height: 150px;
+}
+/*.img-baiviet img{
+  transition: transform. 5s ease;
+}
+.img-baiviet:hover img{
+  transform: scale(1.5);
+}*/
+.post-content{
+ 
+  margin-top: 8px;
+}
+.post-content h3{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  line-height: 1.4em;
+  max-height: 2.8em;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  font-size: 17px;
+  
+  color: black;
+
+}
+.post-content a{
+  text-decoration: none;
+}
+.post-content h3:hover{
+  color: #fe0002;
+  
+}
+.post-content i{
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  background-size: 15px;
+  background-position: center center;
+  margin-right: 3px;
+}
+@media (max-width: 768px){
+  .img-baiviet {
+    margin-bottom: 100px ;
+  }
+  .post-content{
+    margin-top: 10px;
+  }
+
+  .tab-thongtin{
+    margin-bottom: -60px;
+  }
+}

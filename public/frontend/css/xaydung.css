@@ -1,0 +1,190 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.top-small{
+	margin-bottom: 10px;
+	margin-top: 10px;
+	display: flex;
+}
+.top-small span{
+	text-decoration: none;
+	color: #808080;
+	font-size: 12px;
+	
+}
+.top-small a{
+	text-decoration: none;
+}
+.top-small a:hover{
+	color: #fe0002;
+}
+.top-l{
+	color: #808080;
+}
+.spacer{
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #808080;
+	margin-top: 10px;
+}
+.top h3{
+	font-size: 25px;
+	font-family: "Roboto Condensed",sans-serif;
+	line-height: 1.3em;
+	font-weight: 700;
+	color: #333333;
+}
+.top a{
+	text-decoration: none;
+}
+.bot{
+	padding-bottom: 10px;
+}
+.img-bot{
+	margin-bottom: 20px;
+}
+ul li{
+	list-style: none;
+}
+.post-information{
+	font-size: 12px;
+	color: #808080;
+	display: inline-block;
+	text-align: left;
+
+}
+.post-information i{
+	margin-top: -50px;
+}
+.post-item{
+	border: 0;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #f2f2f2;
+   
+}
+.text-content a{
+	text-decoration: none;
+	font-size: 14px;
+	line-height: 1.4em;
+	color: #333;
+	font-weight: bold;
+}
+.text-content a:hover{
+	color: #fe0002;
+}
+h3{
+	font-size: 14px;
+}
+
+.text-content h3{
+	font-weight: bold;
+	
+	overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-height: 1.4em;
+    max-height: 2.8em;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.text-content p{
+	font-size: 14px;
+	top: -10px;
+	color: black;
+}
+.anh-dong{
+	background-position: center;
+	cursor: pointer;
+	background-size: cover;
+}
+.bt1,
+.bt2{
+	display: block;
+	text-align: center;
+}
+.tittle-wrap{
+
+	padding: 0;
+    margin-bottom: 20px;
+    background-color: #ffe9bc;
+    height: 33px;
+    overflow: hidden;
+}
+.tittle-wrap h2 span{
+	padding: 16px 20px;
+    display: inline-block;
+    background-color: #fe0002;
+    position: relative;
+    color: #FFF;
+    bottom: 8px;
+    font: inherit;
+    font-size: 16px !important;
+    
+}
+.tittle-wrap h2 span:after{
+	
+	position: absolute;
+    content: " ";
+    
+    background-repeat: no-repeat;
+    background-size: auto 33px;
+    background-position: center center;
+    width: 60px;
+    height: 33px;
+    top: 0;
+}
+/*phân trang*/
+.pagination-box ul.pagination-list li a.active,
+.pagination-box ul.pagination-list li a:hover{
+	background-image: url(../Images/bg-gradient.png);
+	color: #fff;
+}
+.pagination-box ul.pagination-list li a{
+	
+	text-decoration: none;
+	font-size: 12px;
+	padding: 6px 11px;
+	border: none;
+	border-radius: 15px;
+	background-color: #f2f2f2;	
+	
+}
+.pagination-box .pagination-list li{
+	display: inline-block;
+}
+.pagination-box ul.pagination-list{
+	text-align: right;
+}
+
+/*//responsive
+
+// @media screen and (min-width: 1200px) {
+//   .container {
+//     width: 1150px;
+//   }
+// }
+// @media (min-width: 1200px) {
+//   .container {
+//     width: 1170px;
+//   }
+// }
+// @media (min-width: 992px) {
+//   .container {
+//     width: 970px;
+//   }
+// }
+// @media (min-width: 768px) {
+//   .container {
+//     width: 750px;
+//   }
+// }*/
+
+@media(max-width: 576px)
+{
+	.top h3 {
+		font-size: 14px !important;
+		margin-top: 15px !important;
+	}
+}

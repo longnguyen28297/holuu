@@ -3,7 +3,7 @@
 <!-- main -->
     <main>
         <div class="container">
-            <div class="row home">
+            <div class="row">
                 @yield('home')
 
                 @include('layouts.bannerright')

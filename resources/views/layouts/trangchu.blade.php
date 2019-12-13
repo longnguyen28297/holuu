@@ -1,6 +1,10 @@
 @extends('layouts.home')
 @section('home')
-<div class="main col-lg-9 col-md-9 col-sm-8">
+
+    <main>
+        <div class="container">
+            <div class="row home">
+            <div class="main col-lg-9 col-md-9 col-sm-8">
                     <!-- tin moi  -->
                     <section>
                         <div class="row">
@@ -8,11 +12,11 @@
                             <div class="col-md-8 small-section">
                                 <div class="post-item-tc clearfix">
                                     <div class="img-thumb">
-                                        <a href="chitiet.html"><img src="{{asset('public/frontend/images/feature1.jpg')}}" class="img-fluid"
+                                        <a href="{{route('chitiet')}}"><img src="{{asset('public/frontend/images/feature1.jpg')}}" class="img-fluid"
                                                 alt="Ảnh giao lưu họ Dương"></a>
                                     </div>
                                     <div class="post-content-tc">
-                                        <a title="Thanh niên Họ Dương giao lưu cùng nhóm Naboardgames" href="chitiet.html">
+                                        <a title="Thanh niên Họ Dương giao lưu cùng nhóm Naboardgames" href="{{route('chitiet')}}">
                                             <h3>Thanh niên họ Lưu giao lưu cùng nhóm Naboardgames</h3>
                                         </a>
                                         <div class="post-information clearfix">
@@ -39,13 +43,13 @@
                                             <div class="row">
                                                 <div class="col-md-4 col-xs-3">
                                                     <div class="img-thumb">
-                                                        <a href="chitiet.html"><img src="{{asset('public/frontend/images/feature2.jpg')}}" class="img-fluid"
+                                                        <a href="{{route('chitiet')}}"><img src="{{asset('public/frontend/images/feature2.jpg')}}" class="img-fluid"
                                                                 alt=""></a>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-8 col-xs-9 no-padding-left">
                                                     <div class="post-content">
-                                                        <a href="chitiet.html">
+                                                        <a href="{{route('chitiet')}}">
                                                             <p>Thanh niên Họ Lưu giao lưu </p>
                                                         </a>
                                                     </div>
@@ -59,13 +63,13 @@
                                             <div class="row">
                                                 <div class="col-md-4 col-xs-3">
                                                     <div class="img-thumb">
-                                                        <a href="chitiet.html"><img src="{{asset('public/frontend/images/feature2.jpg')}}" class="img-fluid"
+                                                        <a href="{{route('chitiet')}}"><img src="{{asset('public/frontend/images/feature2.jpg')}}" class="img-fluid"
                                                                 alt=""></a>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-8 col-xs-9 no-padding-left">
                                                     <div class="post-content">
-                                                        <a href="chitiet.html">
+                                                        <a href="{{route('chitiet')}}">
                                                             <p>Thanh niên Họ lưu giao lưu </p>
                                                         </a>
                                                     </div>
@@ -79,14 +83,14 @@
                                             <div class="row">
                                                 <div class="col-md-4 col-xs-3">
                                                     <div class="img-thumb">
-                                                        <a href="chitiet.html"><img src="{{asset('public/frontend/images/feature2.jpg')}}" class="img-fluid"
+                                                        <a href="{{route('chitiet')}}"><img src="{{asset('public/frontend/images/feature2.jpg')}}" class="img-fluid"
                                                                 alt=""></a>
 
                                                     </div>
                                                 </div>
                                                 <div class="col-md-8 col-xs-9 no-padding-left">
                                                     <div class="post-content">
-                                                        <a href="chitiet.html">
+                                                        <a href="{{route('chitiet')}}">
                                                             <p>Thanh niên Họ Lưu giao lưu </p>
                                                         </a>
                                                     </div>
@@ -100,13 +104,13 @@
                                             <div class="row">
                                                 <div class="col-md-4 col-xs-3">
                                                     <div class="img-thumb">
-                                                        <a href="chitiet.html"><img src="{{asset('public/frontend/images/feature2.jpg')}}" class="img-fluid"
+                                                        <a href="{{route('chitiet')}}"><img src="{{asset('public/frontend/images/feature2.jpg')}}" class="img-fluid"
                                                                 alt=""></a>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-8 col-xs-9 no-padding-left">
                                                     <div class="post-content ">
-                                                        <a href="chitiet.html">
+                                                        <a href="{{route('chitiet')}}">
                                                             <p>Thanh niên Họ Lưu giao lưu </p>
                                                         </a>
                                                     </div>
@@ -120,13 +124,13 @@
                                             <div class="row">
                                                 <div class="col-md-4 col-xs-3">
                                                     <div class="img-thumb">
-                                                        <a href="chitiet.html"><img src="{{asset('public/frontend/images/feature2.jpg')}}" class="img-fluid"
+                                                        <a href="{{route('chitiet')}}"><img src="{{asset('public/frontend/images/feature2.jpg')}}" class="img-fluid"
                                                                 alt=""></a>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-8 col-xs-9 no-padding-left">
                                                     <div class="post-content ">
-                                                        <a href="chitiet.html">
+                                                        <a href="{{route('chitiet')}}">
                                                             <p>Thanh niên Họ Lưu giao lưu </p>
                                                         </a>
                                                     </div>
@@ -140,13 +144,13 @@
                                             <div class="row">
                                                 <div class="col-md-4 col-xs-3">
                                                     <div class="img-thumb">
-                                                        <a href="chitiet.html"><img src="{{asset('public/frontend/images/feature2.jpg')}}" class="img-fluid"
+                                                        <a href="{{route('chitiet')}}"><img src="{{asset('public/frontend/images/feature2.jpg')}}" class="img-fluid"
                                                                 alt=""></a>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-8 col-xs-9 no-padding-left">
                                                     <div class="post-content">
-                                                        <a href="chitiet.html">
+                                                        <a href="{{route('chitiet')}}">
                                                             <p>Thanh niên Họ Lưu giao lưu </p>
                                                         </a>
                                                     </div>
@@ -167,49 +171,49 @@
                     <section>
                         <div class="row slider">
                             <div class="owl-carousel owl-theme col-md-12">
-                                <div class="item"><a href="chitiet.html"><img src="{{asset('public/frontend/images/feature1.jpg')}}" alt="">
+                                <div class="item"><a href="{{route('chitiet')}}"><img src="{{asset('public/frontend/images/feature1.jpg')}}" alt="">
                                         <p>Thanh niên họ Lưu giao lưu ...</p>
                                     </a></div>
-                                <div class="item"><a href="chitiet.html"><img src="{{asset('public/frontend/images/feature2.jpg')}}" alt="">
+                                <div class="item"><a href="{{route('chitiet')}}"><img src="{{asset('public/frontend/images/feature2.jpg')}}" alt="">
                                         <p>Thanh niên họ Lưu giao lưu ...</p>
                                     </a></div>
-                                <div class="item"><a href="chitiet.html"><img src="{{asset('public/frontend/images/feature1.jpg')}}" alt="">
+                                <div class="item"><a href="{{route('chitiet')}}"><img src="{{asset('public/frontend/images/feature1.jpg')}}" alt="">
                                         <p>Thanh niên họ Lưu giao lưu ...</p>
                                     </a></div>
-                                <div class="item"><a href="chitiet.html"><img src="{{asset('public/frontend/images/feature1.jpg')}}" alt="">
+                                <div class="item"><a href="{{route('chitiet')}}"><img src="{{asset('public/frontend/images/feature1.jpg')}}" alt="">
                                         <p>Thanh niên họ Lưu giao lưu ...</p>
                                     </a></div>
-                                <div class="item"><a href="chitiet.html"><img src="{{asset('public/frontend/images/feature1.jpg')}}" alt="">
+                                <div class="item"><a href="{{route('chitiet')}}"><img src="{{asset('public/frontend/images/feature1.jpg')}}" alt="">
                                         <p>Thanh niên họ Lưu giao lưu ...</p>
                                     </a></div>
-                                <div class="item"><a href="chitiet.html"><img src="{{asset('public/frontend/images/feature1.jpg')}}" alt="">
+                                <div class="item"><a href="{{route('chitiet')}}"><img src="{{asset('public/frontend/images/feature1.jpg')}}" alt="">
                                         <p>Thanh niên họ Lưu giao lưu ...</p>
                                     </a></div>
-                                <div class="item"><a href="chitiet.html"><img src="{{asset('public/frontend/images/feature1.jpg')}}" alt="">
+                                <div class="item"><a href="{{route('chitiet')}}"><img src="{{asset('public/frontend/images/feature1.jpg')}}" alt="">
                                         <p>Thanh niên họ Lưu giao lưu ...</p>
                                     </a></div>
-                                <div class="item"><a href="chitiet.html"><img src="{{asset('public/frontend/images/feature1.jpg')}}" alt="">
+                                <div class="item"><a href="{{route('chitiet')}}"><img src="{{asset('public/frontend/images/feature1.jpg')}}" alt="">
                                         <p>Thanh niên họ Lưu giao lưu ...</p>
                                     </a></div>
-                                <div class="item"><a href="chitiet.html"><img src="{{asset('public/frontend/images/feature1.jpg')}}" alt="">
+                                <div class="item"><a href="{{route('chitiet')}}"><img src="{{asset('public/frontend/images/feature1.jpg')}}" alt="">
                                         <p>Thanh niên họ Lưu giao lưu ...</p>
                                     </a></div>
-                                <div class="item"><a href="chitiet.html"><img src="{{asset('public/frontend/images/feature1.jpg')}}" alt="">
+                                <div class="item"><a href="{{route('chitiet')}}"><img src="{{asset('public/frontend/images/feature1.jpg')}}" alt="">
                                         <p>Thanh niên họ Lưu giao lưu ...</p>
                                     </a></div>
-                                <div class="item"><a href="chitiet.html"><img src="{{asset('public/frontend/images/feature1.jpg')}}" alt="">
+                                <div class="item"><a href="{{route('chitiet')}}"><img src="{{asset('public/frontend/images/feature1.jpg')}}" alt="">
                                         <p>Thanh niên họ Lưu giao lưu ...</p>
                                     </a></div>
-                                <div class="item"><a href="chitiet.html"><img src="{{asset('public/frontend/images/feature1.jpg')}}" alt="">
+                                <div class="item"><a href="{{route('chitiet')}}"><img src="{{asset('public/frontend/images/feature1.jpg')}}" alt="">
                                         <p>Thanh niên họ Lưu giao lưu ...</p>
                                     </a></div>
-                                <div class="item"><a href="chitiet.html"><img src="{{asset('public/frontend/images/feature1.jpg')}}" alt="">
+                                <div class="item"><a href="{{route('chitiet')}}"><img src="{{asset('public/frontend/images/feature1.jpg')}}" alt="">
                                         <p>Thanh niên họ Lưu giao lưu ...</p>
                                     </a></div>
-                                <div class="item"><a href="chitiet.html"><img src="{{asset('public/frontend/images/feature1.jpg')}}" alt="">
+                                <div class="item"><a href="{{route('chitiet')}}"><img src="{{asset('public/frontend/images/feature1.jpg')}}" alt="">
                                         <p>Thanh niên họ Lưu giao lưu ...</p>
                                     </a></div>
-                                <div class="item"><a href="chitiet.html"><img src="{{asset('public/frontend/images/feature1.jpg')}}" alt="">
+                                <div class="item"><a href="{{route('chitiet')}}"><img src="{{asset('public/frontend/images/feature1.jpg')}}" alt="">
                                         <p>Thanh niên họ Lưu giao lưu ...</p>
                                     </a></div>
                             </div>
@@ -227,11 +231,11 @@
                                     </div>
                                     <div class="post-item-main clearfix">
                                         <div class="img-thumb">
-                                            <a href="chitiet.html"><img src="{{asset('public/frontend/images/feature1.jpg')}}" class="img-fluid"
+                                            <a href="{{route('chitiet')}}"><img src="{{asset('public/frontend/images/feature1.jpg')}}" class="img-fluid"
                                                     alt="Ảnh giao lưu họ Dương"></a>
                                         </div>
                                         <div class="post-content-main">
-                                            <a title="Thanh niên Họ Dương giao lưu cùng nhóm Naboardgames" href="chitiet.html">
+                                            <a title="Thanh niên Họ Dương giao lưu cùng nhóm Naboardgames" href="{{route('chitiet')}}">
                                                 <h3>Thanh niên họ Lưu giao lưu cùng nhóm Naboardgames</h3>
                                             </a>
                                             <div class="post-information-main clearfix">
@@ -256,13 +260,13 @@
                                                 <div class="row">
                                                     <div class="col-md-4 col-xs-3">
                                                         <div class="img-thumb">
-                                                            <a href="chitiet.html"><img src="{{asset('public/frontend/images/feature2.jpg')}}" class="img-fluid"
+                                                            <a href="{{route('chitiet')}}"><img src="{{asset('public/frontend/images/feature2.jpg')}}" class="img-fluid"
                                                                     alt=""></a>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-8 col-xs-9 no-padding-left">
                                                         <div class="post-content">
-                                                            <a href="chitiet.html">
+                                                            <a href="{{route('chitiet')}}">
                                                                 <p>Báo cáo sơ kết 6 tháng đầu năm 2019 và phương hướng
                                                                     hoạt động </p>
                                                             </a>
@@ -277,13 +281,13 @@
                                                 <div class="row">
                                                     <div class="col-md-4 col-xs-3">
                                                         <div class="img-thumb">
-                                                            <a href="chitiet.html"><img src="{{asset('public/frontend/images/feature2.jpg')}}" class="img-fluid"
+                                                            <a href="{{route('chitiet')}}"><img src="{{asset('public/frontend/images/feature2.jpg')}}" class="img-fluid"
                                                                     alt=""></a>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-8 col-xs-9 no-padding-left">
                                                         <div class="post-content">
-                                                            <a href="chitiet.html">
+                                                            <a href="{{route('chitiet')}}">
                                                                 <p>Báo cáo sơ kết 6 tháng đầu năm 2019 và phương hướng
                                                                     hoạt động </p>
                                                             </a>
@@ -298,14 +302,14 @@
                                                 <div class="row">
                                                     <div class="col-md-4 col-xs-3">
                                                         <div class="img-thumb">
-                                                            <a href="chitiet.html"><img src="{{asset('public/frontend/images/feature2.jpg')}}" class="img-fluid"
+                                                            <a href="{{route('chitiet')}}"><img src="{{asset('public/frontend/images/feature2.jpg')}}" class="img-fluid"
                                                                     alt=""></a>
 
                                                         </div>
                                                     </div>
                                                     <div class="col-md-8 col-xs-9 no-padding-left">
                                                         <div class="post-content">
-                                                            <a href="chitiet.html">
+                                                            <a href="{{route('chitiet')}}">
                                                                 <p>Báo cáo sơ kết 6 tháng đầu năm 2019 và phương hướng
                                                                     hoạt động </p>
                                                             </a>

@@ -1,22 +1,24 @@
 @extends('layouts.row')
 @section('home')
-<div class="col-md-8">
+<div class="container">
+		<div class="row">
+			<div class="col-md-8">
 				<div class="top-small">
 					<div class="tc">
-						<a title="Go to Bản tin Điện tử Họ Dương Việt Nam." href="">
+						<a title="Go to Bản tin Điện tử Họ Dương Việt Nam." href="{{route('trangchu')}}">
 							<span>Trang chủ /&nbsp;</span>
 							<meta content="1" property="position">
 						</a>
 					</div>
 					<div class="xdt">
-						<a title="Go to Bản tin Điện tử Họ Dương Việt Nam." href="">
+						<a title="Go to Bản tin Điện tử Họ Dương Việt Nam." href="{{route('xaydungdongtoc')}}">
 							<span>Xây dựng dòng tộc /&nbsp;</span>
 							<meta content="1" property="position">
 						</a>
 					</div>
 					<div>
 						<a title="Go to Bản tin Điện tử Họ Dương Việt Nam." href="">
-							<span>Hội đồng họ Lưu Việt Nam &nbsp;</span>
+							<span>Chi tiết &nbsp;</span>
 							<meta content="1" property="position">
 						</a>
 					</div>
@@ -27,10 +29,10 @@
 						<h2 class="post-title">Hội đồng Họ Dương TP. Cần Thơ sơ kết 6 tháng đầu năm</h2>
 						<div class="post-information">
 							<i class="fa fa-calendar" aria-hidden="true"></i>
-							<span>14/01/2019</span> 
+							<span>14/01/2019</span>&emsp;
 							<i class="fa fa-edit">
 								Ban Thông tin truyền thông
-							</i> 
+							</i>&ensp;
 							<i class="fa fa-eye" aria-hidden="true">1234</i>
 						</div>
 						<!-- Bản Tin -->
@@ -160,9 +162,9 @@
 									</div>
 									<div class="post-information">
 										<i class="fa fa-calendar" aria-hidden="true"></i>
-										<span>14/01/2019</span> 
+										<span>14/01/2019</span>&emsp;
 										<i class="fa fa-edit">
-										</i> 
+										</i>&ensp;
 									</div>
 								</div>
 
@@ -180,9 +182,9 @@
 									</div>
 									<div class="post-information">
 										<i class="fa fa-calendar" aria-hidden="true"></i>
-										<span>14/01/2019</span> 
+										<span>14/01/2019</span>&emsp;
 										<i class="fa fa-edit">
-										</i> 
+										</i>&ensp;
 									</div>
 								</div>
 
@@ -200,9 +202,9 @@
 									</div>
 									<div class="post-information">
 										<i class="fa fa-calendar" aria-hidden="true"></i>
-										<span>14/01/2019</span> 
+										<span>14/01/2019</span>&emsp;
 										<i class="fa fa-edit">
-										</i> 
+										</i>&ensp;
 									</div>
 								</div>
 							</div>
@@ -231,9 +233,9 @@
 						</div>
 						<div class="post-information">
 							<i class="fa fa-calendar" aria-hidden="true"></i>
-							<span>14/01/2019</span> 
+							<span>14/01/2019</span>&emsp;
 							<i class="fa fa-edit">
-							</i> 
+							</i>&ensp;
 						</div>
 					</div>
 
@@ -250,9 +252,9 @@
 						</div>
 						<div class="post-information">
 							<i class="fa fa-calendar" aria-hidden="true"></i>
-							<span>14/01/2019</span> 
+							<span>14/01/2019</span>&emsp;
 							<i class="fa fa-edit">
-							</i> 
+							</i>&ensp;
 						</div>
 					</div>
 
@@ -269,15 +271,17 @@
 						</div>
 						<div class="post-information">
 							<i class="fa fa-calendar" aria-hidden="true"></i>
-							<span>14/01/2019</span> 
+							<span>14/01/2019</span>&emsp;
 							<i class="fa fa-edit">
-							</i> 
+							</i>&ensp;
 						</div>
 					</div>
 				</div>
 
-				<p> </p>
-				<p> </p>
-				<p> </p>
+				<p>&ensp;</p>
+				<p>&ensp;</p>
+				<p>&ensp;</p>
 			</div>
+			
+
 					@stop

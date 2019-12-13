@@ -9,7 +9,7 @@
 			</a>
 		</div>
 		<div class="xdt">
-			<span>&nbsp;Xây dựng dòng tộc</span>
+			<span>&nbsp;Khuyến học khuyến tài</span>
 		</div>
 	</div>
 
@@ -24,11 +24,11 @@
 			<div class="top-l">
 				<div class="row">
 					<div class="anh col-md-7 col-xs-12">
-						<a href="chitiet.html"><img src="http://hoduongvietnam.com.vn/wp-content/uploads/2019/07/le-1.jpg"></a>
+						<a href="{{route('chitiet')}}"><img src="http://hoduongvietnam.com.vn/wp-content/uploads/2019/07/le-1.jpg"></a>
 					</div>
 					<div class="col-md-5 col-xs-12">
 						<div class="top">
-							<a title="Lễ ra mắt Hội đồng Họ Dương huyện Đắk Mil, tỉnh Đắk Nông" href="chitiet.html">
+							<a title="Lễ ra mắt Hội đồng Họ Dương huyện Đắk Mil, tỉnh Đắk Nông" href="{{route('chitiet')}}">
 								<h3>
 									Lễ ra mắt Hội đồng Họ Dương huyện Đắk Mil, tỉnh Đắk Nông
 								</h3>
@@ -56,11 +56,11 @@
 					<!-- anh1 -->
 					<div class="img-bot col-md-6 col-xs-12">
 						<div class="img-small">
-							<a href="chitiet.html"> <img src="http://hoduongvietnam.com.vn/wp-content/uploads/2019/07/IMG_8859-1.jpg" style="width: 100%; height: 200px;">
+							<a href="{{route('chitiet')}}"> <img src="http://hoduongvietnam.com.vn/wp-content/uploads/2019/07/IMG_8859-1.jpg" style="width: 100%; height: 200px;">
 							</a>
 						</div>
 						<div class="text-content">
-							<a title="Hội nghị Tổng kết hoạt động Hội đồng Họ Dương Tây Nam bộ" href="chitiet.html">
+							<a title="Hội nghị Tổng kết hoạt động Hội đồng Họ Dương Tây Nam bộ" href="{{route('chitiet')}}">
 								<h3>
 									Hội nghị Tổng kết hoạt động Hội đồng Họ Dương Tây Nam bộ
 								</h3>
@@ -77,11 +77,11 @@
 					<!-- anh2 -->
 					<div class="img-bot col-md-6 col-xs-12">
 						<div class="img-small">
-							<a href="chitiet.html"><img src="http://hoduongvietnam.com.vn/wp-content/uploads/2019/07/03-1.jpg" style="width: 100%; height: 200px;">
+							<a href="{{route('chitiet')}}"><img src="http://hoduongvietnam.com.vn/wp-content/uploads/2019/07/03-1.jpg" style="width: 100%; height: 200px;">
 							</a>
 						</div>
 						<div class="text-content">
-							<a title="Hội nghị Thường trực Hội đồng Họ Dương Việt Nam mở rộng" href="chitiet.html">
+							<a title="Hội nghị Thường trực Hội đồng Họ Dương Việt Nam mở rộng" href="{{route('chitiet')}}">
 								<h3>
 									Hội nghị Thường trực Hội đồng Họ Dương Việt Nam mở rộng
 								</h3>
@@ -99,7 +99,7 @@
 					<!-- anh3 -->
 					<div class="img-bot col-md-6 col-xs-12">
 						<div class="img-small">
-							<a href="chitiet.html"> <img src="http://hoduongvietnam.com.vn/wp-content/uploads/2019/07/1333693865fd81a3d8ec.jpg" style="width: 100%; height: 200px;">
+							<a href="{{route('chitiet')}}"> <img src="http://hoduongvietnam.com.vn/wp-content/uploads/2019/07/1333693865fd81a3d8ec.jpg" style="width: 100%; height: 200px;">
 							</a>
 						</div>
 						<div class="text-content">
@@ -121,11 +121,11 @@
 					<!-- anh4 -->
 					<div class="img-bot col-md-6 col-xs-12">
 						<div class="img-small">
-							<a href="chitiet.html"> <img src="http://hoduongvietnam.com.vn/wp-content/uploads/2019/07/IMG_0345.jpg" style="width: 100%; height: 200px;">
+							<a href="{{route('chitiet')}}"> <img src="http://hoduongvietnam.com.vn/wp-content/uploads/2019/07/IMG_0345.jpg" style="width: 100%; height: 200px;">
 							</a>
 						</div>
 						<div class="text-content">
-							<a title="Hội nghị Tổng kết hoạt động Hội đồng Họ Dương Tây Nam bộ" href="chitiet.html">
+							<a title="Hội nghị Tổng kết hoạt động Hội đồng Họ Dương Tây Nam bộ" href="{{route('chitiet')}}">
 								<h3>
 									Hội đồng Họ Dương tỉnh Ninh Bình sơ kết 6 tháng đầu năm và triển khai hoạt động cuối năm
 								</h3>
@@ -143,11 +143,11 @@
 					<!-- anh5 -->
 					<div class="img-bot col-md-6 col-xs-12">
 						<div class="img-small">
-							<a href="chitiet.html"> <img src="http://hoduongvietnam.com.vn/wp-content/uploads/2019/07/le.jpg" style="width: 100%; height: 200px;">
+							<a href="{{route('chitiet')}}"> <img src="http://hoduongvietnam.com.vn/wp-content/uploads/2019/07/le.jpg" style="width: 100%; height: 200px;">
 							</a>
 						</div>
 						<div class="text-content">
-							<a title="Hội nghị Tổng kết hoạt động Hội đồng Họ Dương Tây Nam bộ" href="chitiet.html">
+							<a title="Hội nghị Tổng kết hoạt động Hội đồng Họ Dương Tây Nam bộ" href="{{route('chitiet')}}">
 								<h3>
 									Hội đồng Họ Dương TP. Hà Nội hoàn thành tốt công tác Dòng tộc 6 tháng đầu năm
 								</h3>
@@ -165,11 +165,11 @@
 					<!-- anh6 -->
 					<div class="img-bot col-md-6 col-xs-12">
 						<div class="img-small">
-							<a href="chitiet.html"> <img src="http://hoduongvietnam.com.vn/wp-content/uploads/2019/07/bactung-2.jpg" style="width: 100%; height: 200px;">
+							<a href="{{route('chitiet')}}"> <img src="http://hoduongvietnam.com.vn/wp-content/uploads/2019/07/bactung-2.jpg" style="width: 100%; height: 200px;">
 							</a>
 						</div>
 						<div class="text-content">
-							<a title="Hội nghị Tổng kết hoạt động Hội đồng Họ Dương Tây Nam bộ" href="chitiet.html">
+							<a title="Hội nghị Tổng kết hoạt động Hội đồng Họ Dương Tây Nam bộ" href="{{route('chitiet')}}">
 								<h3>
 									Hội đồng Họ Dương TP. Hà Nội hoàn thành tốt công tác Dòng tộc 6 tháng đầu năm
 								</h3>
@@ -187,11 +187,11 @@
 					<!-- anh7 -->
 					<div class="img-bot col-md-6 col-xs-12">
 						<div class="img-small">
-							<a href="chitiet.html"> <img src="http://hoduongvietnam.com.vn/wp-content/uploads/2019/07/76d6ae38df1c3b42620d.jpg" style="width: 100%; height: 200px;">
+							<a href="{{route('chitiet')}}"> <img src="http://hoduongvietnam.com.vn/wp-content/uploads/2019/07/76d6ae38df1c3b42620d.jpg" style="width: 100%; height: 200px;">
 							</a>
 						</div>
 						<div class="text-content">
-							<a title="Hội nghị Tổng kết hoạt động Hội đồng Họ Dương Tây Nam bộ" href="chitiet.html">
+							<a title="Hội nghị Tổng kết hoạt động Hội đồng Họ Dương Tây Nam bộ" href="{{route('chitiet')}}">
 								<h3>
 									Hội đồng Họ Dương Hải Phòng đổi mới phương thức sơ kết 6 tháng đầu năm 2019
 								</h3>
@@ -209,7 +209,7 @@
 					<!-- anh8 -->
 					<div class="img-bot col-md-6 col-xs-12">
 						<div class="img-small">
-							<a href="chitiet.html"> <img src="http://hoduongvietnam.com.vn/wp-content/uploads/2019/07/bactung-2.jpg" style="width: 100%; height: 200px;">
+							<a href="{{route('chitiet')}}"> <img src="http://hoduongvietnam.com.vn/wp-content/uploads/2019/07/bactung-2.jpg" style="width: 100%; height: 200px;">
 							</a>
 						</div>
 						<div class="text-content">
@@ -231,7 +231,7 @@
 					<!-- anh9 -->
 					<div class="img-bot col-md-6 col-xs-12">
 						<div class="img-small">
-							<a href="chitiet.html"> <img src="http://hoduongvietnam.com.vn/wp-content/uploads/2019/07/hd.jpg" style="width: 100%; height: 200px;">
+							<a href="{{route('chitiet')}}"> <img src="http://hoduongvietnam.com.vn/wp-content/uploads/2019/07/hd.jpg" style="width: 100%; height: 200px;">
 							</a>
 						</div>
 						<div class="text-content">
@@ -296,16 +296,7 @@
 				</div>
 			</div>
 		</div>
-		@include('layouts.bannerright')
 
 
 
-<!-- tab-hover -->
-
-
-		</div>
-	 <!-- back to top -->
-	 <div class="back-to-top" style=""><i class="fas fa-arrow-up"></i></div>
-	</div>
-</div>
 @stop

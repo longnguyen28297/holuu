@@ -9,7 +9,7 @@
 			</a>
 		</div>
 		<div class="xdt">
-			<span>&nbsp;Quy chế</span>
+			<span>&nbsp;Thư viện</span>
 		</div>
 	</div>
 
@@ -296,4 +296,7 @@
 				</div>
 			</div>
 		</div>
+		
+
+
 @stop

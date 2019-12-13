@@ -1,100 +1,873 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.home')
+@section('home')
 
-        <title>Laravel</title>
+    <main>
+        <div class="container">
+            <div class="row home">
+            <div class="main col-lg-9 col-md-9 col-sm-8">
+                    <!-- tin moi  -->
+                    <section>
+                        <div class="row">
+                            <!-- tin trai -->
+                            <div class="col-md-8 small-section">
+                                <div class="post-item-tc clearfix">
+                                    <div class="img-thumb">
+                                        <a href="{{route('chitiet')}}"><img src="{{asset('public/frontend/images/feature1.jpg')}}" class="img-fluid"
+                                                alt="Ảnh giao lưu họ Dương"></a>
+                                    </div>
+                                    <div class="post-content-tc">
+                                        <a title="Thanh niên Họ Dương giao lưu cùng nhóm Naboardgames" href="{{route('chitiet')}}">
+                                            <h3>Thanh niên họ Lưu giao lưu cùng nhóm Naboardgames</h3>
+                                        </a>
+                                        <div class="post-information clearfix">
+                                            <ul>
+                                                <li><i class="fas fa-calendar-alt"> <span>19/07/2019</span></i></li>
+                                                <li><i class="fas fa-edit"> </i><a href="#">Ban thông tin truyền
+                                                        thông</a></li>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+                                            </ul>
+                                        </div>
+                                        <div class="text-content">
+                                            <p>Vào 20h00 tối 18/7/2019, các bạn thanh niên Họ Lưu đã được giao lưu
+                                                trực tuyến cùng nhóm Naboardgames gồm các anh Dương Việt Khánh, Nguyễn
+                                                Đặng Việt Anh, chị Trần Thu Phương </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- tin phai -->
+                            <div class="col-md-4 no-padding">
+                                <div class="hot-new">
+                                    <ul>
+                                        <li class="post-item-small">
+                                            <div class="row">
+                                                <div class="col-md-4 col-xs-3">
+                                                    <div class="img-thumb">
+                                                        <a href="{{route('chitiet')}}"><img src="{{asset('public/frontend/images/feature2.jpg')}}" class="img-fluid"
+                                                                alt=""></a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-8 col-xs-9 no-padding-left">
+                                                    <div class="post-content">
+                                                        <a href="{{route('chitiet')}}">
+                                                            <p>Thanh niên Họ Lưu giao lưu </p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="post-info clearfix">
+                                                        <i class="fas fa-calendar-alt"><span> 19/07/2019</span></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="post-item-small">
+                                            <div class="row">
+                                                <div class="col-md-4 col-xs-3">
+                                                    <div class="img-thumb">
+                                                        <a href="{{route('chitiet')}}"><img src="{{asset('public/frontend/images/feature2.jpg')}}" class="img-fluid"
+                                                                alt=""></a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-8 col-xs-9 no-padding-left">
+                                                    <div class="post-content">
+                                                        <a href="{{route('chitiet')}}">
+                                                            <p>Thanh niên Họ lưu giao lưu </p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="post-info clearfix">
+                                                        <i class="fas fa-calendar-alt"><span> 19/07/2019</span></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="post-item-small">
+                                            <div class="row">
+                                                <div class="col-md-4 col-xs-3">
+                                                    <div class="img-thumb">
+                                                        <a href="{{route('chitiet')}}"><img src="{{asset('public/frontend/images/feature2.jpg')}}" class="img-fluid"
+                                                                alt=""></a>
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-8 col-xs-9 no-padding-left">
+                                                    <div class="post-content">
+                                                        <a href="{{route('chitiet')}}">
+                                                            <p>Thanh niên Họ Lưu giao lưu </p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="post-info clearfix">
+                                                        <i class="fas fa-calendar-alt"><span> 19/07/2019</span></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="post-item-small">
+                                            <div class="row">
+                                                <div class="col-md-4 col-xs-3">
+                                                    <div class="img-thumb">
+                                                        <a href="{{route('chitiet')}}"><img src="{{asset('public/frontend/images/feature2.jpg')}}" class="img-fluid"
+                                                                alt=""></a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-8 col-xs-9 no-padding-left">
+                                                    <div class="post-content ">
+                                                        <a href="{{route('chitiet')}}">
+                                                            <p>Thanh niên Họ Lưu giao lưu </p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="post-info clearfix">
+                                                        <i class="fas fa-calendar-alt"><span> 19/07/2019</span></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="post-item-small">
+                                            <div class="row">
+                                                <div class="col-md-4 col-xs-3">
+                                                    <div class="img-thumb">
+                                                        <a href="{{route('chitiet')}}"><img src="{{asset('public/frontend/images/feature2.jpg')}}" class="img-fluid"
+                                                                alt=""></a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-8 col-xs-9 no-padding-left">
+                                                    <div class="post-content ">
+                                                        <a href="{{route('chitiet')}}">
+                                                            <p>Thanh niên Họ Lưu giao lưu </p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="post-info clearfix">
+                                                        <i class="fas fa-calendar-alt"><span> 19/07/2019</span></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="post-item-small">
+                                            <div class="row">
+                                                <div class="col-md-4 col-xs-3">
+                                                    <div class="img-thumb">
+                                                        <a href="{{route('chitiet')}}"><img src="{{asset('public/frontend/images/feature2.jpg')}}" class="img-fluid"
+                                                                alt=""></a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-8 col-xs-9 no-padding-left">
+                                                    <div class="post-content">
+                                                        <a href="{{route('chitiet')}}">
+                                                            <p>Thanh niên Họ Lưu giao lưu </p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="post-info clearfix">
+                                                        <i class="fas fa-calendar-alt"><span> 19/07/2019</span></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
 
-            .full-height {
-                height: 100vh;
-            }
+                                    </ul>
 
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- slider -->
+                    <section>
+                        <div class="row slider">
+                            <div class="owl-carousel owl-theme col-md-12">
+                                <div class="item"><a href="{{route('chitiet')}}"><img src="{{asset('public/frontend/images/feature1.jpg')}}" alt="">
+                                        <p>Thanh niên họ Lưu giao lưu ...</p>
+                                    </a></div>
+                                <div class="item"><a href="{{route('chitiet')}}"><img src="{{asset('public/frontend/images/feature2.jpg')}}" alt="">
+                                        <p>Thanh niên họ Lưu giao lưu ...</p>
+                                    </a></div>
+                                <div class="item"><a href="{{route('chitiet')}}"><img src="{{asset('public/frontend/images/feature1.jpg')}}" alt="">
+                                        <p>Thanh niên họ Lưu giao lưu ...</p>
+                                    </a></div>
+                                <div class="item"><a href="{{route('chitiet')}}"><img src="{{asset('public/frontend/images/feature1.jpg')}}" alt="">
+                                        <p>Thanh niên họ Lưu giao lưu ...</p>
+                                    </a></div>
+                                <div class="item"><a href="{{route('chitiet')}}"><img src="{{asset('public/frontend/images/feature1.jpg')}}" alt="">
+                                        <p>Thanh niên họ Lưu giao lưu ...</p>
+                                    </a></div>
+                                <div class="item"><a href="{{route('chitiet')}}"><img src="{{asset('public/frontend/images/feature1.jpg')}}" alt="">
+                                        <p>Thanh niên họ Lưu giao lưu ...</p>
+                                    </a></div>
+                                <div class="item"><a href="{{route('chitiet')}}"><img src="{{asset('public/frontend/images/feature1.jpg')}}" alt="">
+                                        <p>Thanh niên họ Lưu giao lưu ...</p>
+                                    </a></div>
+                                <div class="item"><a href="{{route('chitiet')}}"><img src="{{asset('public/frontend/images/feature1.jpg')}}" alt="">
+                                        <p>Thanh niên họ Lưu giao lưu ...</p>
+                                    </a></div>
+                                <div class="item"><a href="{{route('chitiet')}}"><img src="{{asset('public/frontend/images/feature1.jpg')}}" alt="">
+                                        <p>Thanh niên họ Lưu giao lưu ...</p>
+                                    </a></div>
+                                <div class="item"><a href="{{route('chitiet')}}"><img src="{{asset('public/frontend/images/feature1.jpg')}}" alt="">
+                                        <p>Thanh niên họ Lưu giao lưu ...</p>
+                                    </a></div>
+                                <div class="item"><a href="{{route('chitiet')}}"><img src="{{asset('public/frontend/images/feature1.jpg')}}" alt="">
+                                        <p>Thanh niên họ Lưu giao lưu ...</p>
+                                    </a></div>
+                                <div class="item"><a href="{{route('chitiet')}}"><img src="{{asset('public/frontend/images/feature1.jpg')}}" alt="">
+                                        <p>Thanh niên họ Lưu giao lưu ...</p>
+                                    </a></div>
+                                <div class="item"><a href="{{route('chitiet')}}"><img src="{{asset('public/frontend/images/feature1.jpg')}}" alt="">
+                                        <p>Thanh niên họ Lưu giao lưu ...</p>
+                                    </a></div>
+                                <div class="item"><a href="{{route('chitiet')}}"><img src="{{asset('public/frontend/images/feature1.jpg')}}" alt="">
+                                        <p>Thanh niên họ Lưu giao lưu ...</p>
+                                    </a></div>
+                                <div class="item"><a href="{{route('chitiet')}}"><img src="{{asset('public/frontend/images/feature1.jpg')}}" alt="">
+                                        <p>Thanh niên họ Lưu giao lưu ...</p>
+                                    </a></div>
+                            </div>
+                            <div class="col-md-12"><img width="100%" src="{{asset('public/frontend/images/banner.jpg')}}" alt=""></div>
 
-            .position-ref {
-                position: relative;
-            }
+                        </div>
+                    </section>
+                    <!-- tin tuc co ban -->
+                    <section>
+                        <div class="row">
+                            <div class="col-md-6 ">
+                                <div class="main-new">
+                                    <div class="title-name">
+                                        <h3><span> Lịch sử dòng họ</span></h3>
+                                    </div>
+                                    <div class="post-item-main clearfix">
+                                        <div class="img-thumb">
+                                            <a href="{{route('chitiet')}}"><img src="{{asset('public/frontend/images/feature1.jpg')}}" class="img-fluid"
+                                                    alt="Ảnh giao lưu họ Dương"></a>
+                                        </div>
+                                        <div class="post-content-main">
+                                            <a title="Thanh niên Họ Dương giao lưu cùng nhóm Naboardgames" href="{{route('chitiet')}}">
+                                                <h3>Thanh niên họ Lưu giao lưu cùng nhóm Naboardgames</h3>
+                                            </a>
+                                            <div class="post-information-main clearfix">
+                                                <ul>
+                                                    <li><i class="fas fa-calendar-alt"> <span>19/07/2019</span></i></li>
+                                                    <li><i class="fas fa-edit"> </i><a href="#">Ban thông tin truyền
+                                                            thông</a></li>
 
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
+                                                </ul>
+                                            </div>
+                                            <div class="text-main">
+                                                <p>Vào 20h00 tối 18/7/2019, các bạn thanh niên Họ Lưu đã được giao lưu
+                                                    trực tuyến cùng nhóm Naboardgames gồm các anh Dương Việt Khánh,
+                                                    Nguyễn
+                                                    Đặng Việt Anh, chị Trần Thu Phương </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="post-item">
+                                        <ul>
+                                            <li class="post-item-small">
+                                                <div class="row">
+                                                    <div class="col-md-4 col-xs-3">
+                                                        <div class="img-thumb">
+                                                            <a href="{{route('chitiet')}}"><img src="{{asset('public/frontend/images/feature2.jpg')}}" class="img-fluid"
+                                                                    alt=""></a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-8 col-xs-9 no-padding-left">
+                                                        <div class="post-content">
+                                                            <a href="{{route('chitiet')}}">
+                                                                <p>Báo cáo sơ kết 6 tháng đầu năm 2019 và phương hướng
+                                                                    hoạt động </p>
+                                                            </a>
+                                                        </div>
+                                                        <div class="post-info clearfix">
+                                                            <i class="fas fa-calendar-alt"><span> 19/07/2019</span></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="post-item-small">
+                                                <div class="row">
+                                                    <div class="col-md-4 col-xs-3">
+                                                        <div class="img-thumb">
+                                                            <a href="{{route('chitiet')}}"><img src="{{asset('public/frontend/images/feature2.jpg')}}" class="img-fluid"
+                                                                    alt=""></a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-8 col-xs-9 no-padding-left">
+                                                        <div class="post-content">
+                                                            <a href="{{route('chitiet')}}">
+                                                                <p>Báo cáo sơ kết 6 tháng đầu năm 2019 và phương hướng
+                                                                    hoạt động </p>
+                                                            </a>
+                                                        </div>
+                                                        <div class="post-info clearfix">
+                                                            <i class="fas fa-calendar-alt"><span> 19/07/2019</span></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="post-item-small">
+                                                <div class="row">
+                                                    <div class="col-md-4 col-xs-3">
+                                                        <div class="img-thumb">
+                                                            <a href="{{route('chitiet')}}"><img src="{{asset('public/frontend/images/feature2.jpg')}}" class="img-fluid"
+                                                                    alt=""></a>
 
-            .content {
-                text-align: center;
-            }
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-8 col-xs-9 no-padding-left">
+                                                        <div class="post-content">
+                                                            <a href="{{route('chitiet')}}">
+                                                                <p>Báo cáo sơ kết 6 tháng đầu năm 2019 và phương hướng
+                                                                    hoạt động </p>
+                                                            </a>
+                                                        </div>
+                                                        <div class="post-info clearfix">
+                                                            <i class="fas fa-calendar-alt"><span> 19/07/2019</span></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 ">
+                                <div class="main-new">
+                                    <div class="title-name">
+                                        <h3><span> Thông tin sự kiện</span></h3>
+                                    </div>
+                                    <div class="post-item-main clearfix">
+                                        <div class="img-thumb">
+                                            <a href="#"><img src="{{asset('public/frontend/images/feature1.jpg')}}" class="img-fluid"
+                                                    alt="Ảnh giao lưu họ Dương"></a>
+                                        </div>
+                                        <div class="post-content-main">
+                                            <a title="Thanh niên Họ Dương giao lưu cùng nhóm Naboardgames" href="#">
+                                                <h3>Thanh niên họ Lưu giao lưu cùng nhóm Naboardgames</h3>
+                                            </a>
+                                            <div class="post-information-main clearfix">
+                                                <ul>
+                                                    <li><i class="fas fa-calendar-alt"> <span>19/07/2019</span></i></li>
+                                                    <li><i class="fas fa-edit"> </i><a href="#">Ban thông tin truyền
+                                                            thông</a></li>
 
-            .title {
-                font-size: 84px;
-            }
+                                                </ul>
+                                            </div>
+                                            <div class="text-main">
+                                                <p>Vào 20h00 tối 18/7/2019, các bạn thanh niên Họ Lưu đã được giao lưu
+                                                    trực tuyến cùng nhóm Naboardgames gồm các anh Dương Việt Khánh,
+                                                    Nguyễn
+                                                    Đặng Việt Anh, chị Trần Thu Phương </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="post-item">
+                                        <ul>
+                                            <li class="post-item-small">
+                                                <div class="row">
+                                                    <div class="col-md-4 col-xs-3">
+                                                        <div class="img-thumb">
+                                                            <a href="#"><img src="{{asset('public/frontend/images/feature2.jpg')}}" class="img-fluid"
+                                                                    alt=""></a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-8 col-xs-9 no-padding-left">
+                                                        <div class="post-content">
+                                                            <a href="#">
+                                                                <p>Báo cáo sơ kết 6 tháng đầu năm 2019 và phương hướng
+                                                                    hoạt động </p>
+                                                            </a>
+                                                        </div>
+                                                        <div class="post-info clearfix">
+                                                            <i class="fas fa-calendar-alt"><span> 19/07/2019</span></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="post-item-small">
+                                                <div class="row">
+                                                    <div class="col-md-4 col-xs-3">
+                                                        <div class="img-thumb">
+                                                            <a href="#"><img src="{{asset('public/frontend/images/feature2.jpg')}}" class="img-fluid"
+                                                                    alt=""></a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-8 col-xs-9 no-padding-left">
+                                                        <div class="post-content">
+                                                            <a href="#">
+                                                                <p>Báo cáo sơ kết 6 tháng đầu năm 2019 và phương hướng
+                                                                    hoạt động </p>
+                                                            </a>
+                                                        </div>
+                                                        <div class="post-info clearfix">
+                                                            <i class="fas fa-calendar-alt"><span> 19/07/2019</span></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="post-item-small">
+                                                <div class="row">
+                                                    <div class="col-md-4 col-xs-3">
+                                                        <div class="img-thumb">
+                                                            <a href="#"><img src="{{asset('public/frontend/images/feature2.jpg')}}" class="img-fluid"
+                                                                    alt=""></a>
 
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-8 col-xs-9 no-padding-left">
+                                                        <div class="post-content">
+                                                            <a href="#">
+                                                                <p>Báo cáo sơ kết 6 tháng đầu năm 2019 và phương hướng
+                                                                    hoạt động </p>
+                                                            </a>
+                                                        </div>
+                                                        <div class="post-info clearfix">
+                                                            <i class="fas fa-calendar-alt"><span> 19/07/2019</span></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
 
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
+                    <section>
+                        <div class="row">
+                            <div class="col-md-6 ">
+                                <div class="main-new">
+                                    <div class="title-name">
+                                        <h3><span> Khuyến học khuyến tài</span></h3>
+                                    </div>
+                                    <div class="post-item-main clearfix">
+                                        <div class="img-thumb">
+                                            <a href="#"><img src="{{asset('public/frontend/images/feature1.jpg')}}" class="img-fluid"
+                                                    alt="Ảnh giao lưu họ Dương"></a>
+                                        </div>
+                                        <div class="post-content-main">
+                                            <a title="Thanh niên Họ Dương giao lưu cùng nhóm Naboardgames" href="#">
+                                                <h3>Thanh niên họ Lưu giao lưu cùng nhóm Naboardgames</h3>
+                                            </a>
+                                            <div class="post-information-main clearfix">
+                                                <ul>
+                                                    <li><i class="fas fa-calendar-alt"> <span>19/07/2019</span></i></li>
+                                                    <li><i class="fas fa-edit"> </i><a href="#">Ban thông tin truyền
+                                                            thông</a></li>
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
+                                                </ul>
+                                            </div>
+                                            <div class="text-main">
+                                                <p>Vào 20h00 tối 18/7/2019, các bạn thanh niên Họ Lưu đã được giao lưu
+                                                    trực tuyến cùng nhóm Naboardgames gồm các anh Dương Việt Khánh,
+                                                    Nguyễn
+                                                    Đặng Việt Anh, chị Trần Thu Phương </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="post-item">
+                                        <ul>
+                                            <li class="post-item-small">
+                                                <div class="row">
+                                                    <div class="col-md-4 col-xs-3">
+                                                        <div class="img-thumb">
+                                                            <a href="#"><img src="{{asset('public/frontend/images/feature2.jpg')}}" class="img-fluid"
+                                                                    alt=""></a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-8 col-xs-9 no-padding-left">
+                                                        <div class="post-content">
+                                                            <a href="#">
+                                                                <p>Báo cáo sơ kết 6 tháng đầu năm 2019 và phương hướng
+                                                                    hoạt động </p>
+                                                            </a>
+                                                        </div>
+                                                        <div class="post-info clearfix">
+                                                            <i class="fas fa-calendar-alt"><span> 19/07/2019</span></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="post-item-small">
+                                                <div class="row">
+                                                    <div class="col-md-4 col-xs-3">
+                                                        <div class="img-thumb">
+                                                            <a href="#"><img src="{{asset('public/frontend/images/feature2.jpg')}}" class="img-fluid"
+                                                                    alt=""></a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-8 col-xs-9 no-padding-left">
+                                                        <div class="post-content">
+                                                            <a href="#">
+                                                                <p>Báo cáo sơ kết 6 tháng đầu năm 2019 và phương hướng
+                                                                    hoạt động </p>
+                                                            </a>
+                                                        </div>
+                                                        <div class="post-info clearfix">
+                                                            <i class="fas fa-calendar-alt"><span> 19/07/2019</span></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="post-item-small">
+                                                <div class="row">
+                                                    <div class="col-md-4 col-xs-3">
+                                                        <div class="img-thumb">
+                                                            <a href="#"><img src="{{asset('public/frontend/images/feature2.jpg')}}" class="img-fluid"
+                                                                    alt=""></a>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-8 col-xs-9 no-padding-left">
+                                                        <div class="post-content">
+                                                            <a href="#">
+                                                                <p>Báo cáo sơ kết 6 tháng đầu năm 2019 và phương hướng
+                                                                    hoạt động </p>
+                                                            </a>
+                                                        </div>
+                                                        <div class="post-info clearfix">
+                                                            <i class="fas fa-calendar-alt"><span> 19/07/2019</span></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 ">
+                                <div class="main-new">
+                                    <div class="title-name">
+                                        <h3><span> Người tốt việc tốt</span></h3>
+                                    </div>
+                                    <div class="post-item-main clearfix">
+                                        <div class="img-thumb">
+                                            <a href="#"><img src="{{asset('public/frontend/images/feature1.jpg')}}" class="img-fluid"
+                                                    alt="Ảnh giao lưu họ Dương"></a>
+                                        </div>
+                                        <div class="post-content-main">
+                                            <a title="Thanh niên Họ Dương giao lưu cùng nhóm Naboardgames" href="#">
+                                                <h3>Thanh niên họ Lưu giao lưu cùng nhóm Naboardgames</h3>
+                                            </a>
+                                            <div class="post-information-main clearfix">
+                                                <ul>
+                                                    <li><i class="fas fa-calendar-alt"> <span>19/07/2019</span></i></li>
+                                                    <li><i class="fas fa-edit"> </i><a href="#">Ban thông tin truyền
+                                                            thông</a></li>
+
+                                                </ul>
+                                            </div>
+                                            <div class="text-main">
+                                                <p>Vào 20h00 tối 18/7/2019, các bạn thanh niên Họ Lưu đã được giao lưu
+                                                    trực tuyến cùng nhóm Naboardgames gồm các anh Dương Việt Khánh,
+                                                    Nguyễn
+                                                    Đặng Việt Anh, chị Trần Thu Phương </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="post-item">
+                                        <ul>
+                                            <li class="post-item-small">
+                                                <div class="row">
+                                                    <div class="col-md-4 col-xs-3">
+                                                        <div class="img-thumb">
+                                                            <a href="#"><img src="{{asset('public/frontend/images/feature2.jpg')}}" class="img-fluid"
+                                                                    alt=""></a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-8 col-xs-9 no-padding-left">
+                                                        <div class="post-content">
+                                                            <a href="#">
+                                                                <p>Báo cáo sơ kết 6 tháng đầu năm 2019 và phương hướng
+                                                                    hoạt động </p>
+                                                            </a>
+                                                        </div>
+                                                        <div class="post-info clearfix">
+                                                            <i class="fas fa-calendar-alt"><span> 19/07/2019</span></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="post-item-small">
+                                                <div class="row">
+                                                    <div class="col-md-4 col-xs-3">
+                                                        <div class="img-thumb">
+                                                            <a href="#"><img src="{{asset('public/frontend/images/feature2.jpg')}}" class="img-fluid"
+                                                                    alt=""></a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-8 col-xs-9 no-padding-left">
+                                                        <div class="post-content">
+                                                            <a href="#">
+                                                                <p>Báo cáo sơ kết 6 tháng đầu năm 2019 và phương hướng
+                                                                    hoạt động </p>
+                                                            </a>
+                                                        </div>
+                                                        <div class="post-info clearfix">
+                                                            <i class="fas fa-calendar-alt"><span> 19/07/2019</span></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="post-item-small">
+                                                <div class="row">
+                                                    <div class="col-md-4 col-xs-3">
+                                                        <div class="img-thumb">
+                                                            <a href="#"><img src="{{asset('public/frontend/images/feature2.jpg')}}" class="img-fluid"
+                                                                    alt=""></a>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-8 col-xs-9 no-padding-left">
+                                                        <div class="post-content">
+                                                            <a href="#">
+                                                                <p>Báo cáo sơ kết 6 tháng đầu năm 2019 và phương hướng
+                                                                    hoạt động </p>
+                                                            </a>
+                                                        </div>
+                                                        <div class="post-info clearfix">
+                                                            <i class="fas fa-calendar-alt"><span> 19/07/2019</span></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <div class="row">
+                            <div class="col-md-6 ">
+                                <div class="main-new">
+                                    <div class="title-name">
+                                        <h3><span> Cộng đồng họ Lưu</span></h3>
+                                    </div>
+                                    <div class="post-item-main clearfix">
+                                        <div class="img-thumb">
+                                            <a href="#"><img src="{{asset('public/frontend/images/feature1.jpg')}}" class="img-fluid"
+                                                    alt="Ảnh giao lưu họ Dương"></a>
+                                        </div>
+                                        <div class="post-content-main">
+                                            <a title="Thanh niên Họ Dương giao lưu cùng nhóm Naboardgames" href="#">
+                                                <h3>Thanh niên họ Lưu giao lưu cùng nhóm Naboardgames</h3>
+                                            </a>
+                                            <div class="post-information-main clearfix">
+                                                <ul>
+                                                    <li><i class="fas fa-calendar-alt"> <span>19/07/2019</span></i></li>
+                                                    <li><i class="fas fa-edit"> </i><a href="#">Ban thông tin truyền
+                                                            thông</a></li>
+
+                                                </ul>
+                                            </div>
+                                            <div class="text-main">
+                                                <p>Vào 20h00 tối 18/7/2019, các bạn thanh niên Họ Lưu đã được giao lưu
+                                                    trực tuyến cùng nhóm Naboardgames gồm các anh Dương Việt Khánh,
+                                                    Nguyễn
+                                                    Đặng Việt Anh, chị Trần Thu Phương </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="post-item">
+                                        <ul>
+                                            <li class="post-item-small">
+                                                <div class="row">
+                                                    <div class="col-md-4 col-xs-3">
+                                                        <div class="img-thumb">
+                                                            <a href="#"><img src="{{asset('public/frontend/images/feature2.jpg')}}" class="img-fluid"
+                                                                    alt=""></a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-8 col-xs-9 no-padding-left">
+                                                        <div class="post-content">
+                                                            <a href="#">
+                                                                <p>Báo cáo sơ kết 6 tháng đầu năm 2019 và phương hướng
+                                                                    hoạt động </p>
+                                                            </a>
+                                                        </div>
+                                                        <div class="post-info clearfix">
+                                                            <i class="fas fa-calendar-alt"><span> 19/07/2019</span></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="post-item-small">
+                                                <div class="row">
+                                                    <div class="col-md-4 col-xs-3">
+                                                        <div class="img-thumb">
+                                                            <a href="#"><img src="{{asset('public/frontend/images/feature2.jpg')}}" class="img-fluid"
+                                                                    alt=""></a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-8 col-xs-9 no-padding-left">
+                                                        <div class="post-content">
+                                                            <a href="#">
+                                                                <p>Báo cáo sơ kết 6 tháng đầu năm 2019 và phương hướng
+                                                                    hoạt động </p>
+                                                            </a>
+                                                        </div>
+                                                        <div class="post-info clearfix">
+                                                            <i class="fas fa-calendar-alt"><span> 19/07/2019</span></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="post-item-small">
+                                                <div class="row">
+                                                    <div class="col-md-4 col-xs-3">
+                                                        <div class="img-thumb">
+                                                            <a href="#"><img src="{{asset('public/frontend/images/feature2.jpg')}}" class="img-fluid"
+                                                                    alt=""></a>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-8 col-xs-9 no-padding-left">
+                                                        <div class="post-content">
+                                                            <a href="#">
+                                                                <p>Báo cáo sơ kết 6 tháng đầu năm 2019 và phương hướng
+                                                                    hoạt động </p>
+                                                            </a>
+                                                        </div>
+                                                        <div class="post-info clearfix">
+                                                            <i class="fas fa-calendar-alt"><span> 19/07/2019</span></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 ">
+                                <div class="main-new">
+                                    <div class="title-name">
+                                        <h3><span> Góp ý và phản hồi</span></h3>
+                                    </div>
+                                    <div class="post-item-main clearfix">
+                                        <div class="img-thumb">
+                                            <a href="#"><img src="{{asset('public/frontend/images/feature1.jpg')}}" class="img-fluid"
+                                                    alt="Ảnh giao lưu họ Dương"></a>
+                                        </div>
+                                        <div class="post-content-main">
+                                            <a title="Thanh niên Họ Dương giao lưu cùng nhóm Naboardgames" href="#">
+                                                <h3>Thanh niên họ Lưu giao lưu cùng nhóm Naboardgames</h3>
+                                            </a>
+                                            <div class="post-information-main clearfix">
+                                                <ul>
+                                                    <li><i class="fas fa-calendar-alt"> <span>19/07/2019</span></i></li>
+                                                    <li><i class="fas fa-edit"> </i><a href="#">Ban thông tin truyền
+                                                            thông</a></li>
+
+                                                </ul>
+                                            </div>
+                                            <div class="text-main">
+                                                <p>Vào 20h00 tối 18/7/2019, các bạn thanh niên Họ Lưu đã được giao lưu
+                                                    trực tuyến cùng nhóm Naboardgames gồm các anh Dương Việt Khánh,
+                                                    Nguyễn
+                                                    Đặng Việt Anh, chị Trần Thu Phương </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="post-item">
+                                        <ul>
+                                            <li class="post-item-small">
+                                                <div class="row">
+                                                    <div class="col-md-4 col-xs-3">
+                                                        <div class="img-thumb">
+                                                            <a href="#"><img src="{{asset('public/frontend/images/feature2.jpg')}}" class="img-fluid"
+                                                                    alt=""></a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-8 col-xs-9 no-padding-left">
+                                                        <div class="post-content">
+                                                            <a href="#">
+                                                                <p>Báo cáo sơ kết 6 tháng đầu năm 2019 và phương hướng
+                                                                    hoạt động </p>
+                                                            </a>
+                                                        </div>
+                                                        <div class="post-info clearfix">
+                                                            <i class="fas fa-calendar-alt"><span> 19/07/2019</span></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="post-item-small">
+                                                <div class="row">
+                                                    <div class="col-md-4 col-xs-3">
+                                                        <div class="img-thumb">
+                                                            <a href="#"><img src="{{asset('public/frontend/images/feature2.jpg')}}" class="img-fluid"
+                                                                    alt=""></a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-8 col-xs-9 no-padding-left">
+                                                        <div class="post-content">
+                                                            <a href="#">
+                                                                <p>Báo cáo sơ kết 6 tháng đầu năm 2019 và phương hướng
+                                                                    hoạt động </p>
+                                                            </a>
+                                                        </div>
+                                                        <div class="post-info clearfix">
+                                                            <i class="fas fa-calendar-alt"><span> 19/07/2019</span></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="post-item-small">
+                                                <div class="row">
+                                                    <div class="col-md-4 col-xs-3">
+                                                        <div class="img-thumb">
+                                                            <a href="#"><img src="{{asset('public/frontend/images/feature2.jpg')}}" class="img-fluid"
+                                                                    alt=""></a>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-8 col-xs-9 no-padding-left">
+                                                        <div class="post-content">
+                                                            <a href="#">
+                                                                <p>Báo cáo sơ kết 6 tháng đầu năm 2019 và phương hướng
+                                                                    hoạt động </p>
+                                                            </a>
+                                                        </div>
+                                                        <div class="post-info clearfix">
+                                                            <i class="fas fa-calendar-alt"><span> 19/07/2019</span></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- slide thư viện -->
+
+                    <section>
+                        <div class="main-new">
+                            <div class="title-name">
+                                <h3><span> Thư viện</span></h3>
+                            </div>
+                            <div class="owl-carousel owl-theme col-md-12">
+                                <div class="item"><a href="#"><img src="{{asset('public/frontend/images/feature1.jpg')}}" alt="">
+                                        <p>Thanh niên họ Lưu giao lưu ...</p>
+                                    </a></div>
+                                <div class="item"><a href="#"><img src="{{asset('public/frontend/images/feature2.jpg')}}" alt="">
+                                        <p>Thanh niên họ Lưu giao lưu ...</p>
+                                    </a></div>
+                                <div class="item"><a href="#"><img src="{{asset('public/frontend/images/feature1.jpg')}}" alt="">
+                                        <p>Thanh niên họ Lưu giao lưu ...</p>
+                                    </a></div>
+                                <div class="item"><a href="#"><img src="{{asset('public/frontend/images/feature1.jpg')}}" alt="">
+                                        <p>Thanh niên họ Lưu giao lưu ...</p>
+                                    </a></div>
+                                <div class="item"><a href="#"><img src="{{asset('public/frontend/images/feature1.jpg')}}" alt="">
+                                        <p>Thanh niên họ Lưu giao lưu ...</p>
+                                    </a></div>
+                                <div class="item"><a href="#"><img src="{{asset('public/frontend/images/feature1.jpg')}}" alt="">
+                                        <p>Thanh niên họ Lưu giao lưu ...</p>
+                                    </a></div>
+                                <div class="item"><a href="#"><img src="{{asset('public/frontend/images/feature1.jpg')}}" alt="">
+                                        <p>Thanh niên họ Lưu giao lưu ...</p>
+                                    </a></div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
-        </div>
-    </body>
-</html>
+@stop

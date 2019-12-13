@@ -9,7 +9,7 @@
 			</a>
 		</div>
 		<div class="xdt">
-			<span>&nbsp;Quy chế</span>
+			<span>&nbsp;Xây dựng dòng tộc</span>
 		</div>
 	</div>
 

@@ -23,35 +23,48 @@ route::get('/chitiet',[
 	'uses'=>'HomeController@chitiet',
 	'as'=>'chitiet'
 ]);
+//-------------------------------------------------------------
 route::get('congdongdonggop',[
-	'uses'=>'HomeController@congdongdonggop',
+	'uses'=>'CongdongdonggopController@congdongdonggop',
 	'as'=>'congdongdonggop'
 ]);
+//-------------------------------------------------------------
 route::get('gopy',[
-	'uses'=>'HomeController@gopy',
+	'uses'=>'GopyController@gopy',
 	'as'=>'gopy'
 ]);
+//-------------------------------------------------------------
 route::get('khuyenhockhuyentai',[
-	'uses'=>'HomeController@khuyenhockhuyentai',
+	'uses'=>'KhuyenhockhuyentaiController@khuyenhockhuyentai',
 	'as'=>'khuyenhockhuyentai'
 ]);
+//-------------------------------------------------------------
 route::get('lichsudongho',[
-	'uses'=>'HomeController@lichsudongho',
+	'uses'=>'LichsudonghoController@lichsudongho',
 	'as'=>'lichsudongho'
 ]);
+//-------------------------------------------------------------
 route::get('nguoitotviectot',[
-	'uses'=>'HomeController@nguoitotviectot',
+	'uses'=>'NguoitotviectotController@nguoitotviectot',
 	'as'=>'nguoitotviectot'
 ]);
+//-------------------------------------------------------------
 route::get('quyche',[
 	'uses'=>'HomeController@quyche',
 	'as'=>'quyche'
 ]);
+//-------------------------------------------------------------
 route::get('thongtinsukien',[
-	'uses'=>'HomeController@thongtinsukien',
+	'uses'=>'ThongtinsukienController@thongtinsukien',
 	'as'=>'thongtinsukien'
 ]);
+//-------------------------------------------------------------
 route::get('thuvien',[
-	'uses'=>'HomeController@thuvien',
+	'uses'=>'ThuvienController@thuvien',
 	'as'=>'thuvien'
+]);
+//-------------------------------------------------------------
+route::get('xaydungdongtoc',[
+	'uses'=>'HomeController@xaydungdongtoc',
+	'as'=>'xaydungdongtoc'
 ]);

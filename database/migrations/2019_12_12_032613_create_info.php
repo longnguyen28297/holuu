@@ -15,12 +15,15 @@ class CreateInfo extends Migration
     {
         Schema::create('info', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name', 300);
-            $table->string('address', 500);
+            $table->string('name', 255);
+            $table->string('address', 255);
             $table->string('phone', 15);
-            $table->string('email', 500);
+            $table->string('email', 255);
             $table->string('fax', 20);
-            $table->string('slug',500);
+            $table->text('logo',500);
+            $table->text('content', 1000);
+            $table->string('slug',255);
+            $table->tinyInteger('status');
             $table->timestamps();
         });
     }

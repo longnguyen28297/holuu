@@ -113,5 +113,6 @@ return [
     */
 
     'password_timeout' => 10800,
+    'password_confirmation_timeout' => 10,
 
 ];

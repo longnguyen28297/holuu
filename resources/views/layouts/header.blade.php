@@ -3,7 +3,9 @@
       </div>
 <!--banner-mobile-->
   <div class="header-moblie">
-  <img src="{{asset('public/frontend/images/banner-mobile.jpg')}}" class="img-fluid" alt="">
+    @if(isset($banner_header)&&$banner_header!='')
+  <img src="{{asset('public/images')}}/{{$banner_header->images}}" class="img-fluid" alt="">
+  @endif
   </div>
   <!--Header Start-->
   <header>
@@ -22,52 +24,24 @@
       <div class="container">
         <div class="row">
           <div class="menu-main">
-            <nav class="navbar navbar-expand-md"> <a class="navbar-brand" href="{{route('trangchu')}}"><i class="fas fa-home"></i></a>
+            <nav class="navbar navbar-expand-md"> <a class="navbar-brand" href="{{route('home')}}"><i class="fas fa-home"></i></a>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                 <span><i class="fa fa-bars" aria-hidden="true"></i></span></button>
               <div class="collapse navbar-collapse" id="collapsibleNavbar" >
                 <ul class="navbar-nav nav justify-content-center">
-                  <li class="nav-item"> <a class="nav-link" href="#">GIỚI THIỆU</a>
+                	@foreach ($tags_menu as $tag)
+                  <li class="nav-item"> <a class="nav-link" href="{{asset('tags')}}/{{$tag->slug}}">{{$tag->name}}</a>
                     <div class="dropdown">
-                      <div class="dropdown-menu"> <a class="dropdown-item" href="#">BAN CHẤP HÀNH</a>
-                        <a class="dropdown-item" href="#">QUY CHẾ</a> </div>
+                      <div class="dropdown-menu">
+                      	<?php 
+                        $indexing = DB::table('indexing')->where('id_tags',$tag->id)->paginate();
+                        foreach ($indexing as $index) {
+                        ?>
+                      	<a class="dropdown-item" href="{{asset('indexing')}}/{{$index->slug}}">{{$index->name}}</a>
+                      <?php } ?>
                     </div>
                   </li>
-                  <li class="nav-item"> <a class="nav-link" href="{{route('lichsudongho')}}">LỊCH SỬ DÒNG HỌ</a>
-                    <div class="dropdown">
-                      <div class="dropdown-menu"> <a class="dropdown-item" href="#">LỊCH SỬ HỌ LƯU</a> <a class="dropdown-item" href="#">NGHIÊN CỨU LỊCH SỬ DÒNG HỌ </a> </div>
-                    </div>
-                  </li>
-                  <li class="nav-item"> <a class="nav-link" href="{{route('thongtinsukien')}}">THÔNG TIN SỰ KIỆN</a>
-                    <div class="dropdown">
-                      <div class="dropdown-menu"> <a class="dropdown-item" href="#">CƠ HỘI DOANH DOANH</a> <a class="dropdown-item" href="#">CLB DOANH NGHIỆP - DOANH NHÂN</a> <a class="dropdown-item" href="#">CÔNG TY TNHH XÃ HỘI ÁNH DƯƠNG</a> <a class="dropdown-item" href="#">CLB LÃO THÀNH</a> </div>
-                    </div>
-                  </li>
-                  <li class="nav-item"> <a class="nav-link" href="{{route('khuyenhockhuyentai')}}">KHUYẾN HỌC KHUYẾN TÀI</a>
-                    <div class="dropdown">
-                      <div class="dropdown-menu"> <a class="dropdown-item" href="#">KHUYẾN HỌC KHUYẾN TÀI</a> <a class="dropdown-item" href="#">HỖ TRỢ TÀI NĂNG TRẺ</a> </div>
-                    </div>
-                  </li>
-                  <li class="nav-item"> <a class="nav-link" href="{{route('nguoitotviectot')}}">NGƯỜI TỐT VIỆC TỐT</a>
-                    <div class="dropdown">
-                      <div class="dropdown-menu"> <a class="dropdown-item" href="#">CLB THANH NIÊN</a> <a class="dropdown-item" href="#">THANH NIÊN TIÊU BIỂU</a> <a class="dropdown-item" href="#">LẬP THÂN LẬP NGHIỆP</a> </div>
-                    </div>
-                  </li>
-                  <li class="nav-item"> <a class="nav-link" href="{{route('thuvien')}}">THƯ VIỆN</a>
-                    <div class="dropdown">
-                      <div class="dropdown-menu"> <a class="dropdown-item" href="#"> VĂN HÓA NT</a> <a class="dropdown-item" href="#">TRẠI HÈ THANH NIÊN</a> <a class="dropdown-item" href="#">VĂN BẢN</a> <a class="dropdown-item" href="#">HÌNH ẢNH </a> </div>
-                    </div>
-                  </li>
-                  <li class="nav-item"> <a class="nav-link" href="{{route('congdongdonggop')}}">CỘNG ĐỒNG HỌ LƯU ĐÓNG GÓP</a>
-                    <div class="dropdown">
-                      <div class="dropdown-menu"> <a class="dropdown-item" href="#">BÀI VIẾT THÀNH VIÊN DÒNG TỘC</a> <a class="dropdown-item" href="#">THI ĐUA KHEN THƯỞNG</a> </div>
-                    </div>
-                  </li>
-                  <li class="nav-item"> <a class="nav-link" href="{{route('gopy')}}">GÓP Ý</a>
-                    <div class="dropdown">
-                      <div class="dropdown-menu"> <a class="dropdown-item" href="#">VĂN HÓA VĂN NGHỆ</a> <a class="dropdown-item" href="#">VĂN BẢN</a> <a class="dropdown-item" href="#">HÌNH ẢNH-VIDEO</a> <a class="dropdown-item" href="#">KHÁC</a> </div>
-                    </div>
-                  </li>
+                  @endforeach
                 </ul>
               </div>
             </nav>
@@ -90,20 +64,16 @@
           </div>
           <div class="col-md-8 col-sm-8 col-xs-9 headerline-slide">
             <ul class="ticker clearfix inline-block">
-              <li><a href="#">Trại hè Thanh niên Họ Dương Việt Nam năm 2019: Hành trình tự hào</a></li>
-              <li><a href="#">Thí sinh Dương Thị Thu Định xuất sắc đạt giải nhất chung kết cuộc thi cùng lên Võ đài khởi nghiệp năm 2019</a></li>
-              <li><a href="#">Bài phát biểu Bế mạc Trại hè Thanh niên Họ Dương Việt Nam lần thứ II năm 2019</a></li>
-              <li><a href="#">Nội dung chương trình Trại hè thanh niên Họ Dương Việt Nam năm 2019</a></li>
-              <li><a href="#">Chương trình Giao lưu với các diễn giả trẻ: Nơi vun đắp những giá trị</a></li>
-              <li><a href="#">Người bạn gái Họ Dương</a></li>
-              <li><a href="#">Thanh niên Họ Dương quản trị tâm thế, thay đổi tư duy làm chủ cuộc đời</a></li>
+              @foreach($all_topic as $topic)
+              <li><a href="{{asset('chi-tiet')}}/{{$topic->slug}}">{{$topic->title}}</a></li>
+              @endforeach
             </ul>
           </div>
           <div class="col-md-3 col-sm-3 col-xs-12 headerline-right">
             <!-- Search Form start -->
             <div class="form-Search">
-              <form role="search" method="get" action="#" class="form-right">
-                <input type="text" class="search-field" placeholder="Tìm kiếm..." name="s">
+              <form role="search" method="get" action="{{asset('search')}}" class="form-right">
+                <input type="text" class="search-field" placeholder="Tìm kiếm..." name="key">
                 <button type="submit" id="search-submit"> <i class="fa fa-search"></i></button>
               </form>
               <!-- Search Form end -->

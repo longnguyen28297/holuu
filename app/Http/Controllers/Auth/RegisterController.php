@@ -7,6 +7,7 @@ use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Auth;
 
 class RegisterController extends Controller
 {
@@ -28,7 +29,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/admin';
 
     /**
      * Create a new controller instance.
@@ -37,9 +38,8 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest');
+        $this->middleware('Admin');
     }
-
     /**
      * Get a validator for an incoming registration request.
      *
@@ -51,8 +51,27 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
-        ]);
+            'password' => ['required', 'string', 'min:6', 'confirmed'],
+            'role'=>['required','boolean','numeric'],
+        ],
+        [
+            'boolean'=>'Bạn đang cố làm điều gì vậy?',
+            'required'=>':attribute không được để trống',
+            'min' => ':attribute không được nhỏ hơn :min kí tự',
+            'max'=>':attribute không được lớn hơn :max kí tự',
+            'email'=> ':attribute phải đúng định dạng email vd: abc@xyz.vn',
+            'unique'=>':attribute đã tồn tại',
+            'role.required'=>'Bạn đang cố làm điều gì vậy?',
+            'role.numeric'=>'Bạn đang cố làm điều gì vậy?',
+            'confirmed'=>'Nhập lại mật khẩu chưa đúng'
+
+        ],
+        [
+            'name'=>'Tên',
+            'email'=>'Email',
+            'password'=>'Mật khẩu'
+        ]
+    );
     }
 
     /**
@@ -67,6 +86,7 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'role' => $data['role'],
         ]);
     }
 }

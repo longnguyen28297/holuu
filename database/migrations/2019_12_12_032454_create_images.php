@@ -15,8 +15,10 @@ class CreateImages extends Migration
     {
         Schema::create('images', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name', 2550);
-            $table->string('slug',500);
+            $table->text('images',1000);
+            $table->string('title',255);
+            $table->string('slug',255);
+            $table->tinyInteger('status');
             $table->timestamps();
         });
     }

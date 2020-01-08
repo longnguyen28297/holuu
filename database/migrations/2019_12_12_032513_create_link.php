@@ -15,10 +15,10 @@ class CreateLink extends Migration
     {
         Schema::create('link', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('link', 2550);
-            $table->unsignedBigInteger('id_index');
-            $table->foreign('id_index')->references('id')->on('indexing')->onDelete('cascade');
-            $table->string('slug',500);
+            $table->text('link', 2550);
+            $table->string('title',255);
+            $table->string('slug',255);
+            $table->tinyInteger('status');
             $table->timestamps();
         });
     }

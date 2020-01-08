@@ -1,103 +1,43 @@
 <section class="footer-wrapper">
     <div class="container footer">
       <div class="row">
+         @if(isset($info)&&$info!='')
         <div class="col-md-3 col-sm-6 footer-one">
-          <div class="logo-footer"> <img src="{{asset('public/frontend/images/logo-holuu.jpg')}}" class="img-fluid" alt=""> </div>
+          <div class="logo-footer"> <img src="{{asset('public/images/logo')}}/{{$info->logo}}" class="img-fluid" alt=""> </div>
           <div class="footer-one-content">
-            <h4>BẢN TIN ĐIỆN TỬ <br>
-              HỌ LƯU VIỆT NAM</h4>
-            <p>Chịu trách nhiệm nội dung: Ông Dương Văn Khá - Phó Tổng Thư ký; Phó Ban Thông tin truyền thông Hội đồng Họ Dương Việt Nam</p>
+            <h4>{{$info->name}}</h4>
+            <p><?php echo htmlspecialchars_decode($info->content); ?></p>
           </div>
         </div>
+        @endif
         <div class="col-md-3 col-sm-6 footer-two">
           <div class="widget fbt-vc-inner clearfix">
             <div class="widget-title">
               <h2>TIN XEM NHIỀU</h2>
             </div>
+            @foreach($topic_topview->take(5) as $topic)
             <div class="post-item ">
               <div class="row">
                 <div class="col-sm-4 col-xs-3">
                   <div class="img-thumb"> 
                       
-                      <a href="#"> <img src="{{asset('public/frontend/images/quyuoc-300x228.png')}}" class="img-fluid" alt="">
+                      <a href="{{asset('chi-tiet')}}/{{$topic->slug}}"> <img src="{{asset('public/images')}}/{{$topic->images}}" class="img-fluid" alt="">
                     </a> </div>
                 </div>
                 <div class="col-sm-8 col-xs-9 ">
                   <div class="post-content"> 
-                      <a title=" VIỆT NAM" href="#">
-                    <h3> VIỆT NAM</h3>
+                      <a title=" VIỆT NAM" href="{{asset('chi-tiet')}}/{{$topic->slug}}">
+                    <h3> {{$topic->title}}</h3>
                     </a> </div>
                   <div class="post-information clearfix">
                     <ul class="date-footer">
-                      <li class="text-footer"><span><i class="fas fa-calendar-alt"></i></span> 23/05/2019</li>
+                      <li class="text-footer"><span><i class="fas fa-calendar-alt"></i></span> {{$topic->created_at}}</li>
                     </ul>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="post-item ">
-              <div class="row">
-                <div class="col-sm-4 col-xs-3">
-                  <div class="img-thumb"> 
-                      
-                      <a href="#"> <img src="{{asset('public/frontend/images/quyuoc-300x228.png')}}" class="img-fluid" alt="">
-                    </a> </div>
-                </div>
-                <div class="col-sm-8 col-xs-9 ">
-                  <div class="post-content"> 
-                      <a title=" VIỆT NAM" href="#">
-                    <h3> VIỆT NAM</h3>
-                    </a> </div>
-                  <div class="post-information clearfix">
-                    <ul class="date-footer">
-                       <li class="text-footer"><span><i class="fas fa-calendar-alt"></i></span> 23/05/2019</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-             <div class="post-item ">
-              <div class="row">
-                <div class="col-sm-4 col-xs-3">
-                  <div class="img-thumb"> 
-                      
-                      <a href="#"> <img src="{{asset('public/frontend/images/quyuoc-300x228.png')}}" class="img-fluid" alt="">
-                    </a> </div>
-                </div>
-                <div class="col-sm-8 col-xs-9 ">
-                  <div class="post-content"> 
-                      <a title=" VIỆT NAM" href="#">
-                    <h3> VIỆT NAM</h3>
-                    </a> </div>
-                  <div class="post-information clearfix">
-                    <ul class="date-footer">
-                     <li class="text-footer"><span><i class="fas fa-calendar-alt"></i></span> 23/05/2019</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-               <div class="post-item ">
-              <div class="row">
-                <div class="col-sm-4 col-xs-3">
-                  <div class="img-thumb"> 
-                      
-                      <a href="#"> <img src="{{asset('public/frontend/images/quyuoc-300x228.png')}}" class="img-fluid" alt="">
-                    </a> </div>
-                </div>
-                <div class="col-sm-8 col-xs-9 ">
-                  <div class="post-content"> 
-                      <a title=" VIỆT NAM" href="#">
-                    <h3> VIỆT NAM</h3>
-                    </a> </div>
-                  <div class="post-information clearfix">
-                    <ul class="date-footer">
-                      <li class="text-footer"><span><i class="fas fa-calendar-alt"></i></span> 23/05/2019</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
+            @endforeach
           </div>
         </div>
         <div class="col-md-3 col-sm-6 footer-there">
@@ -107,48 +47,13 @@
             </div>
             <div class="img-footer">
                 <div class="row">
+                  @foreach($images8 as $images)
                 <div class="col-md-6 ">
                     <div class="zoom-img">
-                       <a class="fancybox" href="{{asset('public/frontend/images/anh5.jpg')}}" data-fancybox-group="gallery" title=""><img src="{{asset('public/frontend/images/anh1.jpg')}}"  class="img-fluid" alt="1"></a>
+                       <a class="fancybox" href="" data-fancybox-group="gallery" title=""><img src="{{asset('public/images')}}/{{$images->images}}"  class="img-fluid" alt="1"></a>
                     </div>
                     </div>
-                    <div class="col-md-6 ">
-                    <div class="zoom-img">
-                       <a class="fancybox" href="{{asset('public/frontend/images/anh6.jpg')}}" data-fancybox-group="gallery" title=""><img src="{{asset('public/frontend/images/anh2.jpg')}}"  class="img-fluid" alt="1"></a>
-                        
-                    </div>
-                    </div>
-                    <div class="col-md-6 ">
-                    <div class="zoom-img">
-                       <a class="fancybox" href="{{asset('public/frontend/images/anh7.jpg')}}" data-fancybox-group="gallery" title=""><img src="{{asset('public/frontend/images/anh3.jpg')}}"  class="img-fluid" alt="1"></a>
-                        
-                    </div>
-                    </div>
-                    <div class="col-md-6 ">
-                    <div class="zoom-img">
-                       <a class="fancybox" href="{{asset('public/frontend/images/anh8.jpg')}}" data-fancybox-group="gallery" title=""><img src="{{asset('public/frontend/images/anh4.jpg')}}"  class="img-fluid" alt="1"></a>
-                    </div>
-                    </div>
-                    <div class="col-md-6 ">
-                    <div class="zoom-img">
-                       <a class="fancybox" href="{{asset('public/frontend/images/anh8.jpg')}}" data-fancybox-group="gallery" title=""><img src="{{asset('public/frontend/images/anh4.jpg')}}"  class="img-fluid" alt="1"></a>
-                    </div>
-                    </div>
-                    <div class="col-md-6 ">
-                    <div class="zoom-img">
-                       <a class="fancybox" href="{{asset('public/frontend/images/anh8.jpg')}}" data-fancybox-group="gallery" title=""><img src="{{asset('public/frontend/images/anh4.jpg')}}"  class="img-fluid" alt="1"></a>
-                    </div>
-                    </div>
-                    <div class="col-md-6 ">
-                    <div class="zoom-img">
-                       <a class="fancybox" href="{{asset('public/frontend/images/anh8.jpg')}}" data-fancybox-group="gallery" title=""><img src="{{asset('public/frontend/images/anh4.jpg')}}"  class="img-fluid" alt="1"></a>
-                    </div>
-                    </div>
-                    <div class="col-md-6 ">
-                    <div class="zoom-img">
-                       <a class="fancybox" href="{{asset('public/frontend/images/anh8.jpg')}}" data-fancybox-group="gallery" title=""><img src="{{asset('public/frontend/images/anh4.jpg')}}"  class="img-fluid" alt="1"></a>
-                    </div>
-                    </div>
+                    @endforeach
                 </div>  
             </div>
           </div>
@@ -175,30 +80,18 @@
                 <h2>THỐNG KÊ CẬP NHẬT</h2>
              <a href="#" id="detail"> Xem tất cả</a>
                 <ul  class="category-list">
+                  @if(isset($count_topic_other_city)&&$count_topic_other_city!='')
                   <li >
-                      <a href="#">Khác<span class="count">(240 tin)</span>
+                      <a href="#">Khác<span class="count">({{$count_topic_other_city}} tin)</span>
                       </a>
                   </li>
+                  @endif
+                  @foreach($citys as $city)
                   <li >
-                      <a href="#">Hà Nội <span class="count">(27tin)</span>
+                      <a href="#">{{$city->name}} <span class="count">({{$city->count_topic}} tin)</span>
                       </a>
                   </li>
-                 <li >
-                      <a href="#">Vĩnh Phúc<span class="count">(17 tin)</span>
-                      </a>
-                  </li>
-                    <li >
-                      <a href="#">Hồ Chí Minh<span class="count">(17 tin)</span>
-                      </a>
-                  </li>
-                    <li >
-                      <a href="#">Thái Nguyên<span class="count">(17 tin)</span>
-                      </a>
-                  </li>
-                    <li >
-                      <a href="#">An Giang<span class="count">(12 tin)</span>
-                      </a>
-                  </li>
+                  @endforeach
               </ul>
             </div>
           </div>
@@ -210,10 +103,11 @@
   <section>
       <div class="footer-last">
       <div class="container">
+        @if(isset($info)&&$info!='')
           <div class="row">
           <div class="col-md-4 col-sm-12 footer-last-right text-justify">
               <div class="title-footer-last-right">
-              <h3>BẢN TIN ĐIỆN TỬ HỌ DƯƠNG VIỆT NAM </h3>
+              <h3 style="text-transform: uppercase;">{{$info->name}} </h3>
               <p>© 2009-2018 Họ Dương Việt Nam. All rights reserved</p>
               
               </div>
@@ -221,9 +115,8 @@
               </div>
               <div class="col-md-4 col-sm-12 footer-last-center ">
                   <div class="title-footer-last-center">
-              <p>
-              Khu Trung Đoàn 918, Phường Phúc Đồng, Quận Long Biên, Thành phố Hà Nội</p> 
-          <span class=""> Điện thoại: 0243.526.5678 - Fax: 0243.699.3366 - Email: thongtinsukienhdvn@gmail.com</span>
+              <p>Địa chỉ: {{$info->address}}</p> 
+          <span class=""> Điện thoại: {{$info->phone}} - Fax: {{$info->fax}} - Email: {{$info->email}}</span>
               </div>
                   </div>
               <div class="col-md-4 col-sm-12 footer-last-left text-center">
@@ -239,7 +132,8 @@
                       </a>
                   </div>
               </div>
-          </div>  
+          </div>
+          @endif
           </div>
       </div>
       </section>

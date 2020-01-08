@@ -16,9 +16,9 @@ class CreateIndexing extends Migration
         Schema::create('indexing', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('id_tags');
-            $table->foreign('id_tags')->references('id')->on('tags')->onDelete('cascade');
-            $table->string('name',300);
-            $table->string('slug',500);
+            $table->foreign('id_tags')->references('id')->on('tags')->onDelete('cascade')->onUpdate('cascade');
+            $table->string('name',255);
+            $table->string('slug',255);
             $table->timestamps();
         });
     }

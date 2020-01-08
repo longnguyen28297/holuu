@@ -15,8 +15,9 @@ class CreateCity extends Migration
     {
         Schema::create('city', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name', 300);
-            $table->string('slug',500);
+            $table->string('name', 255);
+            $table->string('slug',255);
+            $table->integer('count_topic')->default('0');
             $table->timestamps();
         });
     }

@@ -15,9 +15,9 @@ class CreateView extends Migration
     {
         Schema::create('view', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name',500);
+            $table->string('name',255);
             $table->bigInteger('views');
-            $table->string('slug',500);
+            $table->string('slug',255);
             $table->timestamps();
         });
     }

@@ -29,6 +29,7 @@ class CreateTopic extends Migration
             $table->string('keyword', 255)->nullable();
             $table->bigInteger('views')->defauth(0);
             $table->tinyInteger('censor');
+            $table->tinyInteger('status');
             $table->timestamps();
         });
     }

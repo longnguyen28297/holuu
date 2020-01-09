@@ -1,7 +1,8 @@
 @extends('layouts.master')
 @section('content')
 
-
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v5.0"></script>
 <div class="row">
 	<div class="col-md-12">
 		<h2 class="post-title">{{$topic_detail->title}}</h2>
@@ -53,8 +54,9 @@
 			<a title="Twitter" href="https://twitter.com/share?text=dongholuu&url={{url()->full()}}">
 				<span><i class="fab fa-twitter-square"></i></span>
 			</a>
-
-		</div>
+			<p><strong>Fanpage:</strong></p>
+			<div class="fb-like" data-href="@if(isset($info)&&$info!=''&&$info->facebook!=''){{$info->facebook}}@endif" data-width="" data-layout="standard" data-action="like" data-size="small" data-share="true"></div>
+		</div>{{$info->facebook}}
 
 		<!-- Tab links -->
 		<div class="tab">
@@ -66,7 +68,7 @@
 		<div id="thongtin" class="tabcontent">
 			<div class="tab-thongtin">
 				<div class="avatar">
-					<img width="100" height="100" src="{{asset('public/images')}}/{{$info->logo}}">
+					<img width="100" height="100" src="{{asset('public/images/logo')}}/{{$info->logo}}">
 				</div>
 				<div class="text">
 					<h5>

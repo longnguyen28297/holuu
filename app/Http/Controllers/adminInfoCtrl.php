@@ -61,6 +61,7 @@ class adminInfoCtrl extends adminHomeCtrl
 				'fax'=>$request->fax,
 				'content'=>$request->content,
 				'logo'=>$images,
+				'facebook'=>$request->facebook,
 				'created_at'=>date("Y-m-d H:i:s"),
 				'updated_at'=>date("Y-m-d H:i:s")
 			]);
@@ -125,6 +126,7 @@ class adminInfoCtrl extends adminHomeCtrl
 				'fax'=>$request->fax,
 				'content'=>$request->content,
 				'logo'=>$images,
+				'facebook'=>$request->facebook,
 				'created_at'=>date("Y-m-d H:i:s"),
 				'updated_at'=>date("Y-m-d H:i:s")
 			]);

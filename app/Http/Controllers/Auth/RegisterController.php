@@ -2,14 +2,16 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\adminHomeCtrl;
 use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Auth;
+use Illuminate\Http\Request;
+use Illuminate\Auth\Events\Registered;
 
-class RegisterController extends Controller
+class RegisterController extends adminHomeCtrl
 {
     /*
     |--------------------------------------------------------------------------
@@ -29,7 +31,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/admin';
+    protected $redirectTo = '/admin/listUser';
 
     /**
      * Create a new controller instance.
@@ -38,6 +40,7 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
+        parent::__construct();
         $this->middleware('Admin');
     }
     /**
@@ -88,5 +91,14 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
             'role' => $data['role'],
         ]);
+    }
+      public function register(Request $request)
+    {
+        $this->validator($request->all())->validate();
+
+        event(new Registered($user = $this->create($request->all())));
+        // ở đây đã xóa dòng $this->guard()->login($user)
+        return $this->registered($request, $user)
+            ?: redirect($this->redirectPath());
     }
 }

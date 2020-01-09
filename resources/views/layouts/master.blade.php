@@ -187,7 +187,7 @@
             <h2><span>Tin nổi bật</span> </h2>
         </div>
         <ul>
-            @foreach($topic_topview as $topic)
+            @foreach($topic_topview->take(5) as $topic)
             <li class="post-item-small">
                 <div class="row">
                     <div class="col-md-4 col-xs-3">

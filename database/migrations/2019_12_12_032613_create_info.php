@@ -23,6 +23,7 @@ class CreateInfo extends Migration
             $table->text('logo',500);
             $table->text('content', 1000);
             $table->string('slug',255);
+            $table->string('facebook',255)->nullable();
             $table->tinyInteger('status');
             $table->timestamps();
         });

@@ -13,7 +13,7 @@ class indexingController extends HomeController
 	{
 		$indexing = indexing::where('slug',$slug)->first();
 		$tags_topic=tags::where('id',$indexing->id_tags)->first();
-		$listTopicFlIndexing=topic::where('status','1')->where('censor','1')->paginate(10);
+		$listTopicFlIndexing=topic::where('id_index',$indexing->id)->where('status','1')->where('censor','1')->paginate(10);
 		return view('layouts.indexing',[
 		'listTopicFlIndexing'=>$listTopicFlIndexing,
 		'listTopicFlIndexing_first'=>$listTopicFlIndexing->first(),

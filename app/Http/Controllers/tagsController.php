@@ -17,7 +17,7 @@ class tagsController extends HomeController
 		foreach ($indexing as $index) {
 			$id_index.=$index->id.',';
 		}
-		$listTopicFlTags= topic::where('id_index',trim($id_index,','))->where('censor','1')->paginate(10);
+		$listTopicFlTags= topic::where('id_index',trim($id_index,','))->where('status','1')->where('censor','1')->paginate(10);
 		$listTopicFlTags_first=$listTopicFlTags->first();
 		return view('layouts.tags',[
 		'listTopicFlTags_first'=>$listTopicFlTags_first,

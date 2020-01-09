@@ -25,6 +25,6 @@ class info extends Model
     }
     protected $table= 'info';
     protected $fillable= [
-    	'id','name','address','logo','content','phone','email','fax','slug','created_at','updated_at','status'
+    	'id','name','address','logo','content','phone','email','fax','slug','created_at','updated_at','facebook'
     ];
 }

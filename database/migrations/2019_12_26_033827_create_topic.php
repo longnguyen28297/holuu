@@ -26,8 +26,8 @@ class CreateTopic extends Migration
             $table->text('images',1000);
             $table->text('content');
             $table->string('slug', 255);
+            $table->string('keyword', 255)->nullable();
             $table->bigInteger('views')->defauth(0);
-            $table->tinyInteger('status');
             $table->tinyInteger('censor');
             $table->timestamps();
         });

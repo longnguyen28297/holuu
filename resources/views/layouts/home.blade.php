@@ -34,7 +34,7 @@
                             <!-- tin phai -->
                             <div class="col-md-4 no-padding">
                                 <div class="hot-new">
-                                    <ul>@foreach($topic_new->skip(1)->take(8) as $topic)
+                                    <ul>@foreach($topic_new->skip(1)->take(4) as $topic)
                                         <li class="post-item-small">
                                             <div class="row">
                                                 <div class="col-md-4 col-xs-3">

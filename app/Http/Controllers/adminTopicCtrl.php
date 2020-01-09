@@ -105,9 +105,6 @@ function newPost(Request $request){
             $city->update([
                 'count_topic'=>$count_topic,
             ]);
-            for ($i = 0; $i < 5; $i++) {
-                
-            
             $topic_new = new topic([
                 'id_index'=>$request->index,
                 'id_city'=>$request->city,
@@ -125,7 +122,7 @@ function newPost(Request $request){
             ]);
             $topic_new->save();
             $new_topic_new = $topic_new->replicate();
-        }
+        
             return redirect()->to('admin');
         }else {
            return $this->new()->withErrors(['images'=>'Bạn chưa chọn ảnh đại diện bài viết'])->with($input);

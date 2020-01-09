@@ -10,7 +10,7 @@
 			<div class="top-l">
 				<div class="row">
 					<div class="anh col-md-7 col-xs-12">
-						<a href="{{asset('chi-tiet')}}/{{$listTopicFlTags_first->slug}}"><img src="{{asset('public/images')}}/{{$listTopicFlTags_first->images}}"></a>
+						<a href="{{asset('chi-tiet')}}/{{$listTopicFlTags_first->slug}}"><img src="{{asset('images')}}/{{$listTopicFlTags_first->images}}"></a>
 					</div>
 					<div class="col-md-5 col-xs-12">
 						<div class="top">
@@ -43,7 +43,7 @@
 					@foreach($listTopicFlTags->skip(1) as $topic)
 					<div class="img-bot col-md-6 col-xs-12">
 						<div class="img-small">
-							<a href="{{asset('chi-tiet')}}/{{$topic->slug}}"> <img src="{{asset('public/images')}}/{{$topic->images}}" style="width: 100%; height: 200px;">
+							<a href="{{asset('chi-tiet')}}/{{$topic->slug}}"> <img src="{{asset('images')}}/{{$topic->images}}" style="width: 100%; height: 200px;">
 							</a>
 						</div>
 						<div class="text-content">
@@ -56,10 +56,11 @@
 								<i class="fa fa-calendar" aria-hidden="true"></i>
 								<span>{{$topic->created_at}}</span> 
 								<i class="fa fa-edit">
-									<?php 
-                                                            $creator=DB::table('users')->where('id',$topic->creator)->first();
-                                                            echo $creator->name;
-                                                        ?>
+									@foreach($creator as $creator)
+				@if($creator->id==$topic_detail->creator)
+				{{$creator->name}}
+				@endif
+				@endforeach
 								</i>
 							</div>
 						</div>

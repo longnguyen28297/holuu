@@ -13,10 +13,11 @@
 			echo date_format($date,"d/m/Y H:i:s");
 			?></span>&emsp;
 			<i class="fa fa-edit">
-				<?php 
-				$creator = DB::table('users')->where('id',$topic_detail->creator)->first();
-				echo $creator->name;
-				?>
+				@foreach($creator as $creator)
+				@if($creator->id==$topic_detail->creator)
+				{{$creator->name}}
+				@endif
+				@endforeach
 			</i>&ensp;
 			<i class="fa fa-eye" aria-hidden="true"> {{$topic_detail->views}}</i>
 		</div>
@@ -68,7 +69,7 @@
 		<div id="thongtin" class="tabcontent">
 			<div class="tab-thongtin">
 				<div class="avatar">
-					<img width="100" height="100" src="{{asset('public/images/logo')}}/{{$info->logo}}">
+					<img width="100" height="100" src="{{asset('images/logo')}}/{{$info->logo}}">
 				</div>
 				<div class="text">
 					<h5>
@@ -91,7 +92,7 @@
 				@foreach ($topic_new->take(3) as $topic)
 				<div class="img-baiviet col-md-4">
 					<a href="{{asset('chi-tiet')}}/{{$topic->slug}}">
-						<img src="{{asset('public/images')}}/{{$topic->images}}" alt="">
+						<img src="{{asset('images')}}/{{$topic->images}}" alt="">
 					</a>
 
 					<div class="post-content">
@@ -126,7 +127,7 @@
 	@foreach ($same_topic as $topic)
 	<div class="img-baiviet col-md-4">
 		<a href="{{asset('chi-tiet')}}/{{$topic->slug}}">
-			<img src="{{asset('public/images')}}/{{$topic->images}}" alt="">
+			<img src="{{asset('images')}}/{{$topic->images}}" alt="">
 		</a>
 
 		<div class="post-content">

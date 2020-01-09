@@ -12,6 +12,8 @@ use App\tags;
 use App\info;
 use App\images;
 use App\city;
+use App\User;
+
 
 
 
@@ -47,6 +49,7 @@ class HomeController extends Controller
         $tags_library=tags::where('status_home','1')->where('type','1')->paginate(8);
         $city = city::orderBy('count_topic','DESC')->take(5)->get();
         $count_topic_other_city=(city::sum('count_topic'))-($city->sum('count_topic'));
+        $user=User::all();
         return [
             'banner_header'=>$banner_header,
             'tags_menu'=>$tags_menu,
@@ -63,6 +66,7 @@ class HomeController extends Controller
             'citys'=>$city,
             'count_topic_other_city'=>$count_topic_other_city,
             'banner_slider'=>$banner_slider,
+            'creator'=>$user,
         ];
     }
     public function home()

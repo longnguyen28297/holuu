@@ -3,7 +3,7 @@
       <div class="row">
          @if(isset($info)&&$info!='')
         <div class="col-md-3 col-sm-6 footer-one">
-          <div class="logo-footer"> <img src="{{asset('public/images/logo')}}/{{$info->logo}}" class="img-fluid" alt=""> </div>
+          <div class="logo-footer"> <img src="{{asset('images/logo')}}/{{$info->logo}}" class="img-fluid" alt=""> </div>
           <div class="footer-one-content">
             <h4>{{$info->name}}</h4>
             <p><?php echo htmlspecialchars_decode($info->content); ?></p>
@@ -21,7 +21,7 @@
                 <div class="col-sm-4 col-xs-3">
                   <div class="img-thumb"> 
                       
-                      <a href="{{asset('chi-tiet')}}/{{$topic->slug}}"> <img src="{{asset('public/images')}}/{{$topic->images}}" class="img-fluid" alt="">
+                      <a href="{{asset('chi-tiet')}}/{{$topic->slug}}"> <img src="{{asset('images')}}/{{$topic->images}}" class="img-fluid" alt="">
                     </a> </div>
                 </div>
                 <div class="col-sm-8 col-xs-9 ">
@@ -50,7 +50,7 @@
                   @foreach($images8 as $images)
                 <div class="col-md-6 ">
                     <div class="zoom-img">
-                       <a class="fancybox" href="" data-fancybox-group="gallery" title=""><img src="{{asset('public/images')}}/{{$images->images}}"  class="img-fluid" alt="1"></a>
+                       <a class="fancybox" href="" data-fancybox-group="gallery" title=""><img src="{{asset('images')}}/{{$images->images}}"  class="img-fluid" alt="1"></a>
                     </div>
                     </div>
                     @endforeach

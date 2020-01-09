@@ -11,18 +11,18 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&display=swap" rel="stylesheet">
 
   <!-- slider-bar -->
-  <link rel="stylesheet" href="{{asset('public/frontend/css/owl.carousel.min.css')}}">
-  <link rel="stylesheet" href="{{asset('public/frontend/css/owl.theme.default.css')}}">
+  <link rel="stylesheet" href="{{asset('frontend/css/owl.carousel.min.css')}}">
+  <link rel="stylesheet" href="{{asset('frontend/css/owl.theme.default.css')}}">
   <!-- style -->
-  <link href="{{asset('public/frontend/css/flaticon.css')}}" rel="stylesheet">
-  <link rel="stylesheet" href="{{asset('public/frontend/scss/header.css')}}">
-  <link rel="stylesheet" href="{{asset('public/frontend/scss/trangchu.css')}}">
-  <link rel="stylesheet" href="{{asset('public/frontend/scss/footer.css')}}">
-  <link rel="stylesheet" href="{{asset('public/frontend/css/reset.css')}}">
-  <link rel="stylesheet" href="{{asset('public/frontend/css/xaydung.css')}}">
-  <link rel="stylesheet" href="{{asset('public/frontend/css/chitiet.css')}}">
-  <link rel="stylesheet" href="{{asset('public/frontend/css/right.css')}}">
-  <link rel="stylesheet" href="{{asset('public/frontend/css/jquery.fancybox.css')}}">
+  <link href="{{asset('frontend/css/flaticon.css')}}" rel="stylesheet">
+  <link rel="stylesheet" href="{{asset('frontend/scss/header.css')}}">
+  <link rel="stylesheet" href="{{asset('frontend/scss/trangchu.css')}}">
+  <link rel="stylesheet" href="{{asset('frontend/scss/footer.css')}}">
+  <link rel="stylesheet" href="{{asset('frontend/css/reset.css')}}">
+  <link rel="stylesheet" href="{{asset('frontend/css/xaydung.css')}}">
+  <link rel="stylesheet" href="{{asset('frontend/css/chitiet.css')}}">
+  <link rel="stylesheet" href="{{asset('frontend/css/right.css')}}">
+  <link rel="stylesheet" href="{{asset('frontend/css/jquery.fancybox.css')}}">
 
 
   <title>Bản tin điện tử họ Lưu Việt Nam</title>
@@ -74,7 +74,7 @@
     @foreach($topic_topview->take(3) as $topic)
     <div class="post-item-banner clearfix">
         <div class="img-thumb">
-            <a href="{{asset('chi-tiet')}}/{{$topic->slug}}"><img src="{{asset('public/images')}}/{{$topic->images}}" alt="" class="img-fluid"></a>
+            <a href="{{asset('chi-tiet')}}/{{$topic->slug}}"><img src="{{asset('images')}}/{{$topic->images}}" alt="" class="img-fluid"></a>
         </div>
         <div class="post-content-banner">
             <a href="{{asset('chi-tiet')}}/{{$topic->slug}}">
@@ -86,10 +86,11 @@
                     $date=date_create($topic->created_at);
                     echo date_format($date,"d/m/Y H:i:s");
                     ?></span></li>
-                    <li><i class="fas fa-edit"> </i><a href="#"><?php 
-    $creator = DB::table('users')->where('id',$topic->creator)->first();
-    echo $creator->name;
-?></a></li>
+                    <li><i class="fas fa-edit"> </i><a href="#">@foreach($creator as $creator)
+        @if($creator->id==$topic_detail->creator)
+        {{$creator->name}}
+        @endif
+        @endforeach</a></li>
                 </ul>
             </div>
         </div>
@@ -108,7 +109,7 @@
                     <div class="row">
                         <div class="col-md-4 col-xs-3">
                             <div class="img-thumb">
-                                <a href="{{asset('chi-tiet')}}/{{$topic->slug}}"><img src="{{asset('public/images')}}/{{$topic->images}}" class="img-fluid" alt=""></a>
+                                <a href="{{asset('chi-tiet')}}/{{$topic->slug}}"><img src="{{asset('images')}}/{{$topic->images}}" class="img-fluid" alt=""></a>
                             </div>
                         </div>
                         <div class="col-md-8 col-xs-9 no-padding-left">
@@ -136,7 +137,7 @@
                     <div class="row">
                         <div class="col-md-4 col-xs-3">
                             <div class="img-thumb">
-                                <a href="{{asset('chi-tiet')}}/{{$topic->slug}}"><img src="{{asset('public/images')}}/{{$topic->images}}" class="img-fluid" alt=""></a>
+                                <a href="{{asset('chi-tiet')}}/{{$topic->slug}}"><img src="{{asset('images')}}/{{$topic->images}}" class="img-fluid" alt=""></a>
                             </div>
                         </div>
                         <div class="col-md-8 col-xs-9 no-padding-left">
@@ -163,7 +164,7 @@
     @foreach ($videos as $video)
     <a href=#>
         <video class="embed-responsive" controls>
-            <source src="{{asset('public/videos')}}/{{$video->video}}" type="video/mp4">
+            <source src="{{asset('videos')}}/{{$video->video}}" type="video/mp4">
               Your browser does not support the video tag.
           </video>
       </a>
@@ -192,7 +193,7 @@
                 <div class="row">
                     <div class="col-md-4 col-xs-3">
                         <div class="img-thumb">
-                            <a href="{{asset('chi-tiet')}}/{{$topic->id}}"><img src="{{asset('public/images')}}/{{$topic->images}}" class="img-fluid" alt=""></a>
+                            <a href="{{asset('chi-tiet')}}/{{$topic->id}}"><img src="{{asset('images')}}/{{$topic->images}}" class="img-fluid" alt=""></a>
                         </div>
                     </div>
                     <div class="col-md-8 col-xs-9 no-padding-left">
@@ -228,15 +229,15 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
   <!-- style-js -->
   
-  <script src="{{asset('public/frontend/js/owl.carousel.min.js')}}"></script>
+  <script src="{{asset('frontend/js/owl.carousel.min.js')}}"></script>
   
-  <script src="{{asset('public/frontend/js/cycle.all.js')}}"></script>
-  <script src="{{asset('public/frontend/js/jquery.fancybox.js')}}"></script>
+  <script src="{{asset('frontend/js/cycle.all.js')}}"></script>
+  <script src="{{asset('frontend/js/jquery.fancybox.js')}}"></script>
 
-  <script src="{{asset('public/frontend/js/slider.js')}}"></script>
-  <script src="{{asset('public/frontend/js/tab-hover.js')}}"></script>
-  <script src="{{asset('public/frontend/js/back-to-top.js')}}"></script>
-  <script src="{{asset('public/frontend/js/chitiet.js')}}"></script>
+  <script src="{{asset('frontend/js/slider.js')}}"></script>
+  <script src="{{asset('frontend/js/tab-hover.js')}}"></script>
+  <script src="{{asset('frontend/js/back-to-top.js')}}"></script>
+  <script src="{{asset('frontend/js/chitiet.js')}}"></script>
   
   
   </body>

@@ -62,7 +62,7 @@
           <td>{{$topic->summary}}</td>
           <td><?php $creator= DB::table('users')->where('id',$topic->creator)->first(); ?> 
             {{$creator->name}} </td>
-          <td><img src="{{asset('public/images')}}/{{$topic->images}}" id="img_old" alt="" width="100"></td>
+          <td><img src="{{asset('images')}}/{{$topic->images}}" id="img_old" alt="" width="100"></td>
           <td><a href="{{asset('admin/detail_content')}}/{{$topic->slug}}">Chi tiêt</a></td>
           <td>{{$topic->created_at}}</td>
           <td>

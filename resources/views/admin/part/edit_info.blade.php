@@ -16,7 +16,7 @@
 	<input class="form-control" type="text" value="@if(isset($facebook)){{$facebook}}@else{{$info_old->facebook}}@endif" name="facebook" id="facebook" maxlength="255" ><br>
 	<label class="btn btn-info" for="images">Logo</label><br>
 	<label for="">Logo hiện tại</label><br>
-	<img width="100" src="{{asset('public/images/logo')}}/{{$info_old->logo}}" alt=""><br>
+	<img width="100" src="{{asset('images/logo')}}/{{$info_old->logo}}" alt=""><br>
 	<label for="">Chọn logo mới</label><br>
 	<input type="file" id="images" name="images"><br>
 	<br>

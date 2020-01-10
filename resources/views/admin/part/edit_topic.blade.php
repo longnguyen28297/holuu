@@ -31,7 +31,7 @@
 	<input type="file" id="images" name="images">
 	<br>
 	<label for="img_old">Ảnh hiện tại</label>
-	<img src="{{asset('public/images')}}/{{$topic_old->images}}" id="img_old" alt="" width="100">
+	<img src="{{asset('images')}}/{{$topic_old->images}}" id="img_old" alt="" width="100">
 	<br>
 	<label for="title">Từ khóa (mỗi từ khóa cách nhau bởi dấu ',')</label>
 	<input class="form-control" type="text" value="@if(isset($keyword)){{$keyword}}@else{{$topic_old->keyword}}@endif" name="keyword" id="keyword" maxlength="255" >

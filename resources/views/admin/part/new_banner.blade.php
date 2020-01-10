@@ -5,7 +5,7 @@
 	<br>
 	@if(isset($banner_edit)&&$banner_edit!='')
 	<label for="banner">Ảnh hiện tại</label><br>
-	<img src="{{asset('public/images')}}/{{$banner_edit->images}}" id="img_old" alt="" width="50%" >
+	<img src="{{asset('images')}}/{{$banner_edit->images}}" id="img_old" alt="" width="50%" >
 	<br><br>
 	<label for="images">Chọn ảnh mới</label>
 	@else

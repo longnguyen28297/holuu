@@ -17,15 +17,15 @@ date_default_timezone_set('Asia/Ho_Chi_Minh');
 
   <base href="{{asset('')}}">
   <!-- Custom fonts for this template-->
-  <link href="resources/admin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="{{asset('admin/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
   <!-- ckeditor -->
-  <script src="{!!asset('public/ckeditor/ckeditor.js') !!}"></script>
-  <script src="{!!asset('public/ckeditor/ckfinder/ckfinder.js') !!}"></script>
+  <script src="{!!asset('ckeditor/ckeditor.js') !!}"></script>
+  <script src="{!!asset('ckeditor/ckfinder/ckfinder.js') !!}"></script>
   <!-- Page level plugin CSS-->
-  <link href="resources/admin/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+  <link href="{{asset('admin/vendor/datatables/dataTables.bootstrap4.css')}}" rel="stylesheet">
 
   <!-- Custom styles for this template-->
-  <link href="resources/admin/css/sb-admin.css" rel="stylesheet">
+  <link href="{{asset('admin/css/sb-admin.css')}}" rel="stylesheet">
 
 </head>
 
@@ -55,7 +55,7 @@ date_default_timezone_set('Asia/Ho_Chi_Minh');
           <a class="dropdown-item" href="{{asset('admin/bai-viet-chua-duyet')}}">Có {{$topic_censor->count()}} bài viết chưa duyệt!</a>
           <div class="dropdown-divider"></div>
           @foreach($topic_censor->take(5) as $topic)
-          <a class="dropdown-item" href="{{asset('admin/detail_content')}}/{{$topic->slug}}"><img width="50px" src="{{asset('public/images')}}/{{$topic->images}}" alt="">&nbsp;{{$topic->title}}</a>
+          <a class="dropdown-item" href="{{asset('admin/detail_content')}}/{{$topic->slug}}"><img width="50px" src="{{asset('images')}}/{{$topic->images}}" alt="">&nbsp;{{$topic->title}}</a>
           <div class="dropdown-divider"></div>
           @endforeach
           <a class="dropdown-item text-center" href="{{asset('admin/bai-viet-chua-duyet')}}">Xem tất cả</a>
@@ -203,23 +203,23 @@ date_default_timezone_set('Asia/Ho_Chi_Minh');
 @yield('login')
 @endif
   <!-- Bootstrap core JavaScript-->
-  <script src="resources/admin/vendor/jquery/jquery.min.js"></script>
-  <script src="resources/admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="{{asset('admin/vendor/jquery/jquery.min.js')}}"></script>
+  <script src="{{asset('admin/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 
   <!-- Core plugin JavaScript-->
-  <script src="resources/admin/vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="{{asset('admin/vendor/jquery-easing/jquery.easing.min.js')}}"></script>
 
   <!-- Page level plugin JavaScript-->
-  <script src="resources/admin/vendor/chart.js/Chart.min.js"></script>
-  <script src="resources/admin/vendor/datatables/jquery.dataTables.js"></script>
-  <script src="resources/admin/vendor/datatables/dataTables.bootstrap4.js"></script>
+  <script src="{{asset('admin/vendor/chart.js/Chart.min.js')}}"></script>
+  <script src="{{asset('admin/vendor/datatables/jquery.dataTables.js')}}"></script>
+  <script src="{{asset('admin/vendor/datatables/dataTables.bootstrap4.js')}}"></script>
 
   <!-- Custom scripts for all pages-->
-  <script src="resources/admin/js/sb-admin.min.js"></script>
+  <script src="{{asset('admin/js/sb-admin.min.js')}}"></script>
 
   <!-- Demo scripts for this page-->
-  <script src="resources/admin/js/demo/datatables-demo.js"></script>
-  <script src="resources/admin/js/demo/chart-area-demo.js"></script>
+  <script src="{{asset('admin/js/demo/datatables-demo.js')}}"></script>
+  <script src="{{asset('admin/js/demo/chart-area-demo.js')}}"></script>
 
 </body>
 

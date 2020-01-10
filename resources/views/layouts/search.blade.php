@@ -26,7 +26,7 @@
 								<i class="fa fa-calendar" aria-hidden="true"></i>
 								<span>{{$topic->created_at}}</span> 
 								<i class="fa fa-edit">
-									@foreach($creator as $creator)
+									@foreach($creators as $creator)
 				@if($creator->id==$topic->creator)
 				{{$creator->name}}
 				@endif

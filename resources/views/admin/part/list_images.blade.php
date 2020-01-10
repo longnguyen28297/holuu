@@ -29,7 +29,7 @@
         <tbody>
          @foreach($list_images as $image)
          <tr>
-          <td><img src="{{asset('public/images')}}/{{$image->name}}" id="img_old" alt="" width="100"></td>
+          <td><img src="{{asset('images')}}/{{$image->name}}" id="img_old" alt="" width="100"></td>
           <td>
              @if($image->status==1)
             {{'Hiển thị'}}

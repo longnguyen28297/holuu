@@ -13,7 +13,7 @@
 			echo date_format($date,"d/m/Y H:i:s");
 			?></span>&emsp;
 			<i class="fa fa-edit">
-				@foreach($creator as $creator)
+				@foreach($creators as $creator)
 				@if($creator->id==$topic_detail->creator)
 				{{$creator->name}}
 				@endif

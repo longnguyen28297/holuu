@@ -66,7 +66,7 @@ class HomeController extends Controller
             'citys'=>$city,
             'count_topic_other_city'=>$count_topic_other_city,
             'banner_slider'=>$banner_slider,
-            'creator'=>$user,
+            'creators'=>$user,
         ];
     }
     public function home()

@@ -18,8 +18,8 @@
                         <div class="post-information clearfix">
                             <ul>
                                 <li><i class="fas fa-calendar-alt"> <span>{{$topic_first->created_at}}</span></i></li>
-                                <li><i class="fas fa-edit"> </i><a href="#">@foreach($creator as $creator)
-                                    @if($creator->id==$topic_detail->creator)
+                                <li><i class="fas fa-edit"> </i><a href="#">@foreach($creators as $creator)
+                                    @if($creator->id==$topic_first->creator)
                                     {{$creator->name}}
                                     @endif
                                     @endforeach
@@ -116,8 +116,8 @@
                                             <ul>
                                                 <li><i class="fas fa-calendar-alt"> <span>{{$topicFTags_first->created_at}}</span></i></li>
                                                 <li><i class="fas fa-edit"> </i><a href="#">
-                                                    @foreach($creator as $creator)
-                @if($creator->id==$topic_detail->creator)
+                                                    @foreach($creators as $creator)
+                @if($creator->id==$topicFTags_first->creator)
                 {{$creator->name}}
                 @endif
                 @endforeach

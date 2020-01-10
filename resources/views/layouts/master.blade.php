@@ -86,8 +86,8 @@
                     $date=date_create($topic->created_at);
                     echo date_format($date,"d/m/Y H:i:s");
                     ?></span></li>
-                    <li><i class="fas fa-edit"> </i><a href="#">@foreach($creator as $creator)
-        @if($creator->id==$topic_detail->creator)
+                    <li><i class="fas fa-edit"> </i><a href="#">@foreach($creators as $creator)
+        @if($creator->id==$topic->creator)
         {{$creator->name}}
         @endif
         @endforeach</a></li>

@@ -27,7 +27,7 @@
 								<span>{{$topic->created_at}}</span> 
 								<i class="fa fa-edit">
 									@foreach($creator as $creator)
-				@if($creator->id==$topic_detail->creator)
+				@if($creator->id==$topic->creator)
 				{{$creator->name}}
 				@endif
 				@endforeach

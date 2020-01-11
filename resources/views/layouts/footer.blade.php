@@ -108,7 +108,7 @@
           <div class="col-md-4 col-sm-12 footer-last-right text-justify">
               <div class="title-footer-last-right">
               <h3 style="text-transform: uppercase;">{{$info->name}} </h3>
-              <p>© 2009-2018 Họ Dương Việt Nam. All rights reserved</p>
+              <p>© 2009-2018 Họ Dương Việt Nam. All rights reserved |by web88.vn</p>
               
               </div>
                   

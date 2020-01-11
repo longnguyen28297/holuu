@@ -17,15 +17,15 @@ date_default_timezone_set('Asia/Ho_Chi_Minh');
 
   <base href="{{asset('')}}">
   <!-- Custom fonts for this template-->
-  <link href="{{asset('admin/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
+  <link href="{{asset('FrontAdmin/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
   <!-- ckeditor -->
   <script src="{!!asset('ckeditor/ckeditor.js') !!}"></script>
   <script src="{!!asset('ckeditor/ckfinder/ckfinder.js') !!}"></script>
   <!-- Page level plugin CSS-->
-  <link href="{{asset('admin/vendor/datatables/dataTables.bootstrap4.css')}}" rel="stylesheet">
+  <link href="{{asset('FrontAdmin/vendor/datatables/dataTables.bootstrap4.css')}}" rel="stylesheet">
 
   <!-- Custom styles for this template-->
-  <link href="{{asset('admin/css/sb-admin.css')}}" rel="stylesheet">
+  <link href="{{asset('FrontAdmin/css/sb-admin.css')}}" rel="stylesheet">
 
 </head>
 
@@ -203,23 +203,23 @@ date_default_timezone_set('Asia/Ho_Chi_Minh');
 @yield('login')
 @endif
   <!-- Bootstrap core JavaScript-->
-  <script src="{{asset('admin/vendor/jquery/jquery.min.js')}}"></script>
-  <script src="{{asset('admin/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{asset('FrontAdmin/vendor/jquery/jquery.min.js')}}"></script>
+  <script src="{{asset('FrontAdmin/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 
   <!-- Core plugin JavaScript-->
-  <script src="{{asset('admin/vendor/jquery-easing/jquery.easing.min.js')}}"></script>
+  <script src="{{asset('FrontAdmin/vendor/jquery-easing/jquery.easing.min.js')}}"></script>
 
   <!-- Page level plugin JavaScript-->
-  <script src="{{asset('admin/vendor/chart.js/Chart.min.js')}}"></script>
-  <script src="{{asset('admin/vendor/datatables/jquery.dataTables.js')}}"></script>
-  <script src="{{asset('admin/vendor/datatables/dataTables.bootstrap4.js')}}"></script>
+  <script src="{{asset('FrontAdmin/vendor/chart.js/Chart.min.js')}}"></script>
+  <script src="{{asset('FrontAdmin/vendor/datatables/jquery.dataTables.js')}}"></script>
+  <script src="{{asset('FrontAdmin/vendor/datatables/dataTables.bootstrap4.js')}}"></script>
 
   <!-- Custom scripts for all pages-->
-  <script src="{{asset('admin/js/sb-admin.min.js')}}"></script>
+  <script src="{{asset('FrontAdmin/js/sb-admin.min.js')}}"></script>
 
   <!-- Demo scripts for this page-->
-  <script src="{{asset('admin/js/demo/datatables-demo.js')}}"></script>
-  <script src="{{asset('admin/js/demo/chart-area-demo.js')}}"></script>
+  <script src="{{asset('FrontAdmin/js/demo/datatables-demo.js')}}"></script>
+  <script src="{{asset('FrontAdmin/js/demo/chart-area-demo.js')}}"></script>
 
 </body>
 

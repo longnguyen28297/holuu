@@ -10,7 +10,7 @@
 	<label for="title">Tiêu đề</label>
 	<input class="form-control" type="text" value="@if(isset($title)){{$title}}@endif" name="title" id="title" maxlength="255" >
 	<label for="summary">Tóm tắt</label>
-	<input class="form-control" type="text" value="@if(isset($summary)){{$summary}}@endif" name="summary" id="summary" maxlength="255" >
+	<input class="form-control" type="text" value="@if(isset($summary)){{$summary}}@endif" name="summary" id="summary" maxlength="1000" >
 	<label for="index">Đầu mục</label>
 	<select class="form-control" name="index" id="index">
 		@foreach ($list_indexing as $list_indexing)

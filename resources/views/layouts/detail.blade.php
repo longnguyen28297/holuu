@@ -55,9 +55,11 @@
 			<a title="Twitter" href="https://twitter.com/share?text=dongholuu&url={{url()->full()}}">
 				<span><i class="fab fa-twitter-square"></i></span>
 			</a>
+			@if(isset($info)&&$info!='')
 			<p><strong>Fanpage:</strong></p>
 			<div class="fb-like" data-href="@if(isset($info)&&$info!=''&&$info->facebook!=''){{$info->facebook}}@endif" data-width="" data-layout="standard" data-action="like" data-size="small" data-share="true"></div>
 		</div>{{$info->facebook}}
+		@endif
 
 		<!-- Tab links -->
 		<div class="tab">

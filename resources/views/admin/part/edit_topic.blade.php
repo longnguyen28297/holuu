@@ -13,7 +13,7 @@
 	<label for="title">Tiêu đề</label>
 	<input class="form-control" type="text" name="title" id="title" maxlength="300" value="@if(isset($title)){{$title}}@else{{$topic_old->title}}@endif">
 	<label for="summary">Tóm tắt</label>
-	<input class="form-control" type="text" name="summary" id="summary" maxlength="300" value="@if(isset($summary)){{$summary}}@else{{$topic_old->summary}}@endif">
+	<input class="form-control" type="text" name="summary" id="summary" maxlength="1000" value="@if(isset($summary)){{$summary}}@else{{$topic_old->summary}}@endif">
 	<label for="index">Đầu mục</label>
 	<select class="form-control" name="index" id="index">
 		@foreach ($list_indexing as $indexing)

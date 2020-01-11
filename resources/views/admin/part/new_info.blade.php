@@ -19,7 +19,7 @@
 	<label for="title">Email</label>
 	<input class="form-control" type="email" value="@if(isset($email)){{$email}}@endif" required name="email" id="email" maxlength="500" ><br>
 	<label for="title">Fax</label>
-	<input class="form-control" type="text" value="@if(isset($fax)){{$fax}}@endif" required name="fax" id="fax" maxlength="20" ><br><label for="facebook">Link facebook</label>
+	<input class="form-control" type="text" value="@if(isset($fax)){{$fax}}@endif" required name="fax" id="fax" maxlength="20" ><br><label for="facebook">Link facebook fanpage</label>
 	<input class="form-control" type="text" value="@if(isset($facebook)){{$facebook}}@endif" name="facebook" id="facebook" maxlength="255" ><br>
 	<label for="images">Logo</label>
 	<input type="file" id="images" name="images"><br>

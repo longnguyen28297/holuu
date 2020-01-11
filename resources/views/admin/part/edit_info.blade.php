@@ -12,7 +12,7 @@
 	<input class="form-control" type="email" value="@if(isset($email)){{$email}}@else{{$info_old->email}}@endif" required name="email" id="email" maxlength="500" ><br>
 	<label for="title">Fax</label>
 	<input class="form-control" type="text" value="@if(isset($fax)){{$fax}}@else{{$info_old->fax}}@endif" required name="fax" id="fax" maxlength="20" ><br>
-	<label for="facebook">Link facebook</label>
+	<label for="facebook">Link facebook fanpage</label>
 	<input class="form-control" type="text" value="@if(isset($facebook)){{$facebook}}@else{{$info_old->facebook}}@endif" name="facebook" id="facebook" maxlength="255" ><br>
 	<label class="btn btn-info" for="images">Logo</label><br>
 	<label for="">Logo hiện tại</label><br>

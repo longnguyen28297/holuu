@@ -21,7 +21,7 @@ class CreateTopic extends Migration
             $table->foreign('id_city')->references('id')->on('city')->onDelete('cascade')->onUpdate('cascade');
             $table->unsignedBigInteger('creator');
             $table->foreign('creator')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
-            $table->string('summary',255);
+            $table->text('summary',1000);
             $table->string('title',255);
             $table->text('images',1000);
             $table->text('content');

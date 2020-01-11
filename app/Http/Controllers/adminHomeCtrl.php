@@ -38,7 +38,7 @@ class adminHomeCtrl extends Controller
       $request->all(),
       [ 
         'title' => 'bail|sometimes|required|max:255',
-        'summary' => 'bail|sometimes|required|max:255',
+        'summary' => 'bail|sometimes|required|max:1000',
         'city' => 'bail|sometimes|required',
         'index' => 'bail|sometimes|required',
         'creator' => 'bail|sometimes|required',

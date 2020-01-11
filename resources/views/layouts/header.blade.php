@@ -4,7 +4,7 @@
 <!--banner-mobile-->
   <div class="header-moblie">
     @if(isset($banner_header)&&$banner_header!='')
-  <img src="{{asset('images')}}/{{$banner_header->images}}" class="img-fluid" alt="">
+  <img src="{{asset('images/banner')}}/{{$banner_header->images}}" class="img-fluid" alt="">
   @endif
   </div>
   <!--Header Start-->

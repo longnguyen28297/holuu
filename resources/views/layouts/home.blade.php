@@ -23,7 +23,7 @@
                                     {{$creator->name}}
                                     @endif
                                     @endforeach
-                                    ?></a></li>
+                                    </a></li>
 
                                 </ul>
                             </div>
@@ -144,7 +144,7 @@
                                                         </div>
                                                         <div class="col-md-8 col-xs-9 no-padding-left">
                                                             <div class="post-content">
-                                                                <a href="{{asset('chi-tiet')}}/">
+                                                                <a href="{{asset('chi-tiet')}}/{{$topic->slug}}">
                                                                     <p>{{$topic->title}} </p>
                                                                 </a>
                                                             </div>

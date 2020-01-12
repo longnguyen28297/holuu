@@ -24,7 +24,7 @@ class userAdminController extends adminHomeCtrl
 		if ((User::find($id)->id)==Auth::user()->id) {
 			return redirect()->to('admin/listUser')->withErrors(['Bạn không thể khóa tài khoản hiện đang đăng nhập']);
 		}else {
-			if (User::where('role','1')->count()>1) {
+			if ((User::where('role','1')->count()>1)||(User::find($id)->role)==0) {
 				User::find($id)->update(['status'=>'0']);
 				return redirect()->to('admin/listUser')->withSuccess('Đã khóa');
 			}else {
@@ -44,7 +44,7 @@ class userAdminController extends adminHomeCtrl
 		if ((User::find($id)->id)==Auth::user()->id) {
 			return redirect()->to('admin/listUser')->withErrors(['Bạn không thể xóa tài khoản hiện đang đăng nhập']);
 		}else {
-			if (User::where('role','1')->count()>1) {
+			if ((User::where('role','1')->count()>1)||(User::find($id)->role)==0) {
 				User::find($id)->delete();
 				return redirect()->to('admin/listUser')->withSuccess('Đã xóa');
 			}else {

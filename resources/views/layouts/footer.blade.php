@@ -124,7 +124,7 @@
                   <a href="">
                       <span><i class="fab fa-google-plus-g"></i></span>
                       </a>
-                      <a href="">
+                      <a href="{{$info->facebook}}">
                       <span><i class="fab fa-facebook-square"></i></span>
                       </a>
                       <a href="">
